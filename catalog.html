@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
@@ -7,48 +8,48 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon-apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
-<body>
-  <header>
-    <nav>
+
+<body class="page-body inner-page">
+  <header class="main-header">
+    <nav class="main-navigation">
       <a href="index.html">
-       <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип «Нёрдс»">
+        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип «Нёрдс»">
       </a>
       <ul class="site-navigation">
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
+        <li class="navigation-current"><a href="catalog.html">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
-      <a href="#"><img src="cart.icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a>
+      <a class="site-cart" href="#"><img src="img/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a>
     </nav>
   </header>
-  <main>
+  <main class="container inner-page">
     <h1>Магазин готовых шаблонов</h1>
-    <section>
+    <section class="filter">
       <h2>Фильтр товаров</h2>
-      <h3>Стоимость:</h3>
+      <h3 class="title title-cost">Стоимость:</h3>
       <form>
         <div>
-          <input type="range"  min="0" max="40000">
+          <input type="range" min="0" max="40000">
         </div>
-      от <input type="number" step="1" min="0" placeholder="0">
-      до <input type="number" step="1" max="40000" placeholder="15000">
+        от <input type="number" step="1" min="0" placeholder="0">
+        до <input type="number" step="1" max="40000" placeholder="15000">
       </form>
-      <form method="get" action="https://echo.htmlacademy.ru/">
+      <form class="filter-field" method="get" action="https://echo.htmlacademy.ru/">
         <fieldset>
           <legend>Сетка:</legend>
-          <ul>
+          <ul class="filter-grid">
             <li>
               <input type="radio" name="type of grid" value="adaptive" id="filter-adaptive" checked>
               <label for="filter-adaptive">Адaптивная</label>
             </li>
             <li>
-              <input type="radio" name="type of grid" value="fixed" id="filter-fixed" >
+              <input type="radio" name="type of grid" value="fixed" id="filter-fixed">
               <label for="filter-fixed">Фиксированная</label>
             </li>
             <li>
@@ -59,7 +60,7 @@
         </fieldset>
         <fieldset>
           <legend>Особенности:</legend>
-          <ul>
+          <ul class="filter-details">
             <li>
               <input type="checkbox" name="slider" id="filter-slider" checked>
               <label for="filter-slider">Слайдер</label>
@@ -82,22 +83,36 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="btn btn-show" type="submit">Показать</button>
       </form>
     </section>
-    <section>
+    <section class="template">
       <h2>Список шаблонов</h2>
-      <p>Сортировать:</p>
-      <select>
-        <option selected>По цене</option>
-        <option>По типу</option>
-        <option>По названию</option>
-      </select>
-      <select>
-        <option selected>down</option>
-        <option>up</option>
-      </select>
-      <ul>
+      <p class="sorting">Сортировать:</p>
+      <ul class="variant">
+        <li>
+          <input type="radio" name="inset" value="price" id="inset-price" checked>
+          <label for="inset-price">По цене </label>
+        </li>
+        <li>
+          <input type="radio" name="inset" value="type" id="inset-type">
+          <label for="inset-type">По типу</label>
+        </li>
+        <li>
+          <input type="radio" name="inset" value="title" id="inset-title">
+          <label for="inset-title">По названию</label>
+      </ul>
+      <ul class="route">
+        <li>
+          <input type="radio" name="choice" value="down" id="choice-down" checked>
+          <label for="choice-down">Вниз </label>
+        </li>
+        <li>
+          <input type="radio" name="choice" value="up" id="choice-up">
+          <label for="choice-up">Вверх</label>
+        </li>
+      </ul>
+      <ul class="template-sample">
         <li>
           <h3>«Sedona»</h3>
           <p>
@@ -105,9 +120,9 @@
           </p>
           <div>
             <a href="#">Sedona</a>
-            <p> Информационный сайт <br>для туристов</p>
+            <p class="template-describe"> Информационный сайт <br>для туристов</p>
             <p>
-              <button type="button">9 900 ₽</button>
+              <button class="btn btn-money" type="button">9 900 ₽</button>
             </p>
           </div>
         </li>
@@ -118,9 +133,9 @@
           </p>
           <!-- <div>
             <a href="#">Pink App</a>
-            <p> Продуктовый лендинг<br>приложения для iOS и Android</p>
+            <p class="template-describe"> Продуктовый лендинг<br>приложения для iOS и Android</p>
             <p>
-              <button type="button">9 900 ₽</button>
+              <button class="btn btn-money" type="button">9 900 ₽</button>
             </p>
           </div> -->
         </li>
@@ -131,9 +146,9 @@
           </p>
           <!-- <div>
             <a href="#">Barbershop</a>
-            <p> Сайт салона красоты.<br>Для мужчин, да.</p>
+            <p class="template-describe"> Сайт салона красоты.<br>Для мужчин, да.</p>
             <p>
-              <button type="button">9 900 ₽</button>
+              <button class="btn btn-money" type="button">9 900 ₽</button>
             </p>
           </div> -->
         </li>
@@ -144,9 +159,9 @@
           </p>
           <!-- <div>
             <a href="#">MISHKA</a>
-            <p> Интернет-магазин <br>вязаных игрушек</p>
+            <p class="template-describe"> Интернет-магазин <br>вязаных игрушек</p>
             <p>
-              <button type="button">9 900 ₽</button>
+              <button class="btn btn-money" type="button">9 900 ₽</button>
             </p>
           </div> -->
         </li>
@@ -157,9 +172,9 @@
           </p>
           <!-- <div>
             <a href="#">A Plus</a>
-            <p> Лендинг курсов повышения<br>квалификации</p>
+            <p class="template-describe"> Лендинг курсов повышения<br>квалификации</p>
             <p>
-              <button type="button">9 900 ₽</button>
+              <button class="btn btn-money" type="button">9 900 ₽</button>
             </p>
           </div> -->
         </li>
@@ -172,13 +187,13 @@
             <a href="#">КВАСТ</a>
             <p> Промо-сайт производителя<br>крафтового кваса</p>
             <p>
-              <button type="button">9 900 ₽</button>
+              <button class="btn btn-money" type="button">9 900 ₽</button>
             </p>
           </div> -->
         </li>
       </ul>
-      <ul>
-        <li>
+      <ul class="pagination-list">
+        <li class="pagination-current">
           <a>1</a>
         </li>
         <li>
@@ -193,49 +208,32 @@
       </ul>
     </section>
   </main>
-  <footer>
-    <section>
+  <footer class="main-footer">
+    <section class="footer-contacts">
       <h2>Как нас найти</h2>
-      <p>NЁRDS DESIGN STUDIO</p>
-      <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8 </p>
-      <p> тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-      <a href="#">Напишите нам</a>
+      <p class="contacts-name">NЁRDS DESIGN STUDIO</p>
+      <p class="contacts-adress">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8 </p>
+      <p> тел. <a class="footer-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+      <a class="btn contacts-btn" href="#">Напишите нам</a>
     </section>
-    <section>
+    <section class="footer-social">
       <h2>Давайте дружить!</h2>
-      <ul>
+      <ul class="social-list">
         <li>
-          <a href="#">Вконтакте</a>
+          <a class="social-button" href="#"><img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"></a>
         </li>
         <li>
-          <a href="#">Фейсбук</a>
+          <a class="social-button" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a>
         </li>
-        <li>
-          <a href="#">Инстаграм</a>
+        <li><a class="social-button" href="#"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
+          </a>
         </li>
       </ul>
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <div class="footer-slogan">
+        <p class="footer-quote">Давайте дружить, это выгодно!</p>
+        <p class="footer-promotion">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </section>
   </footer>
-  <section>
-    <h2>Напишите нам</h2>
-    <form action="#" method="post">
-      <p>
-        <label for="name-field">Ваше имя:</label>
-        <input id="name-field" type="text" name="name" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="email-field">Ваш email:</label>
-        <input id="email-field" type="email" name="email" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="message-field">Текст письма:</label>
-        <input id="message-field" type="text" name="message" placeholder="В свободной форме">
-      </p>
-      <button type="submit">Отправить</button>
-    </form>
-    <button type="button">Закрыть</button>
-  </section>
-</body>
+
 </html>
