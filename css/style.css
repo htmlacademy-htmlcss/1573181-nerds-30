@@ -54,6 +54,10 @@
   font-size: 16px;
   line-height: 24px;
   color: rgba(var(--basic-color--rgb), 1);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content ;
+  align-content: start;
 }
 
 a {
@@ -81,8 +85,21 @@ img {
   border: 0;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.wrap-container {
+  width: 1158px;
+  margin:0 auto;
+  padding: 0;
+}
+
 /*Main-background*/
 
+.wrap,
 .main-header,
 .features,
 .inner-page h1 {
@@ -129,6 +146,26 @@ img {
 
 /* Main navigation */
 
+.main-navigation {
+  display: grid;
+}
+
+.wrapper {
+  display:grid;
+  grid-template-columns: 160px 1fr 115px;
+  width: 1158px;
+  margin:0 auto;
+  padding: 0;
+}
+
+.site-cart {
+  justify-self: end;
+}
+
+.site-navigation {
+  justify-self: center;
+}
+
 .site-navigation a,
 .site-cart {
   font-size: 16px;
@@ -160,6 +197,14 @@ img {
 }
 
 /* Main features */
+
+.features {
+  display: grid;
+  grid-row:1/-1;
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0;
+}
 
 .features-slider-slogan {
   font-weight: 500;
@@ -196,6 +241,18 @@ img {
 } */
 
 /* Main offer */
+
+.offer {
+  margin-bottom: 78px;
+}
+
+.offer-list {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  margin:0 ;
+  padding:0;
+}
 
 .offer .title {
   font-size: 24px;
@@ -239,6 +296,28 @@ img {
 
 /* Main info */
 
+.info {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin:0;
+  padding: 0;
+}
+
+.info-projects{
+  width: 651px;
+}
+
+.info-benefits {
+  justify-self: end;
+}
+
+.procent-wrap {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin:0;
+  padding:0;
+}
+
 .info-projects-resume {
   font-weight: 500;
   font-size: 45px;
@@ -278,6 +357,21 @@ img {
 
 /* Main partners*/
 
+.partners {
+  margin-bottom: 80px;
+}
+.partners-list {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin:0;
+  padding:0;
+  column-gap: 40px;
+}
+
+.partners-item {
+  justify-self: center;
+}
+
 .partners-list a {
   opacity: 0.2;
 }
@@ -290,7 +384,19 @@ img {
   opacity: 0.1;
 }
 
-/*Main-footer*/
+/* Main-footer*/
+
+.footer-contacts {
+  display:grid;
+  grid-column: 1/-1;
+  width: 1158px;
+  margin:0 auto;
+  padding: 0;
+}
+
+.contacts-btn {
+  width: 219px;
+}
 
 .contacts-name {
   font-weight: 700;
@@ -305,6 +411,17 @@ img {
   color: rgba(var(--adress-color--rgb), 1);
 }
 
+.social-slogan-wrap {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1158px;
+  margin:0 auto;
+  padding: 0;
+}
+
+.social-list {
+  width: 300px;
+}
 .footer-quote {
   font-weight: 700;
   font-size: 36px;
@@ -317,14 +434,12 @@ img {
   color: rgba(var(--placeholder-color--rgb), 1);
 }
 
-
 .social-list a {
   background: rgba(var(--social-fone--rgb), 1);
 }
 
 .social-list a:hover {
   background: rgba(var(--special-light-red--rgb), 1);
-
 }
 
 .social-list a:focus {
@@ -335,11 +450,11 @@ img {
   opacity: 0.3;
 }
 
-
 .footer-map {
   background: rgba(var(--basic-grey--rgb), 1) url("../img/map.png");
-  width: 1440px;
+  /* width: 1440px; */
   height: 416px;
+  background-size: 100%;
 }
 
 /*Main-modal*/
@@ -398,7 +513,6 @@ img {
 
 /* Inner page*/
 
-
 /*Prevailing text*/
 
 .title-cost {
@@ -426,8 +540,7 @@ img {
 }
 
 .filter-field {
-  line-height: 19px;
-  /* перепроверить, т.к. отличается на странице и в стайлгайде*/
+  line-height: 20px;
 }
 
 .filter-field li {
