@@ -14,28 +14,25 @@
   <base href="https://htmlacademy-htmlcss.github.io/1573181-nerds-30/6/">
 </head>
 
-<body class="page-body inner-page">
+<body class="page-body">
   <header class="main-header">
+    <a class="logo" href="#">
+      <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип «Нёрдс»">
+    </a>
     <nav class="main-navigation">
-      <div class="wrapper">
-        <a href="#">
-          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип «Нёрдс»">
-        </a>
-        <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <a class="site-cart" href="#"><img src="img/cart-icon.svg" width="15" height="15"
-            alt="Иконка корзины">Корзина</a>
-      </div>
+      <ul class="site-navigation">
+        <li><a href="#">Студия</a></li>
+        <li><a href="#">Клиенты</a></li>
+        <li class="active"><a>Магазин</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
     </nav>
+    <a class="site-cart" href="#"><img src="img/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a>
   </header>
   <main class="container inner-page">
-    <h1>Магазин готовых шаблонов</h1>
+    <h1 class="store-title"> Магазин готовых шаблонов</h1>
     <section class="filter">
-      <h2>Фильтр товаров</h2>
+      <h2 class="visually-hidden">Фильтр товаров</h2>
       <h3 class="title title-cost">Стоимость:</h3>
       <form>
         <div>
@@ -87,37 +84,57 @@
             </li>
           </ul>
         </fieldset>
-        <button class="btn btn-show" type="submit">Показать</button>
+        <button class="btn btn-grey" type="submit">Показать</button>
       </form>
     </section>
     <section class="template">
-      <h2>Список шаблонов</h2>
-      <p class="sorting">Сортировать:</p>
-      <ul class="variant">
-        <li>
-          <input type="radio" name="inset" value="price" id="inset-price" checked>
-          <label for="inset-price">По цене </label>
-        </li>
-        <li>
-          <input type="radio" name="inset" value="type" id="inset-type">
-          <label for="inset-type">По типу</label>
-        </li>
-        <li>
-          <input type="radio" name="inset" value="title" id="inset-title">
-          <label for="inset-title">По названию</label>
-      </ul>
-      <ul class="route">
-        <li>
-          <input type="radio" name="choice" value="down" id="choice-down" checked>
-          <label for="choice-down">Вниз </label>
-        </li>
-        <li>
-          <input type="radio" name="choice" value="up" id="choice-up">
-          <label for="choice-up">Вверх</label>
-        </li>
-      </ul>
-      <ul class="template-sample">
-        <li>
+      <h2 class="visually-hidden">Список шаблонов</h2>
+      <form>
+        <fieldset>
+          <legend class="sorting">Сортировать:</legend>
+          <ul class="variant">
+            <li class="variant-item">
+              <input type="radio" name="inset" value="price" id="inset-price" checked>
+              <label for="inset-price">По цене </label>
+            </li>
+            <li>
+              <input type="radio" name="inset" value="type" id="inset-type">
+              <label for="inset-type">По типу</label>
+            </li>
+            <li>
+              <input type="radio" name="inset" value="title" id="inset-title">
+              <label for="inset-title">По названию</label>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <ul class="route">
+            <li>
+              <input type="radio" name="choice" value="down" id="choice-down" checked>
+              <label for="choice-down">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.2">
+                    <path d="M5.5 10L0 0H11" fill="#A6A6A6" />
+                  </g>
+                </svg>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="choice" value="up" id="choice-up">
+              <label for="choice-up">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.2">
+                    <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
+                  </g>
+                </svg>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+      <ul class="template-sample-list">
+        <li class="template-sample-item">
           <h3>«Sedona»</h3>
           <p>
             <img src="img/img-sedona.jpg" width="358" height="578" alt="Шаблон «Sedona»">
@@ -126,74 +143,74 @@
             <a href="#">Sedona</a>
             <p class="template-describe"> Информационный сайт <br>для туристов</p>
             <p>
-              <button class="btn btn-money" type="button">9 900 ₽</button>
+              <button class="btn btn-price" type="button">9 900 ₽</button>
             </p>
           </div>
         </li>
-        <li>
+        <li class="template-sample-item">
           <h3>«Pink»</h3>
           <p>
             <img src="img/img-pink.jpg" width="358" height="578" alt="Шаблон «Pink APP»">
           </p>
-          <!-- <div>
+          <div hidden>
             <a href="#">Pink App</a>
             <p class="template-describe"> Продуктовый лендинг<br>приложения для iOS и Android</p>
             <p>
-              <button class="btn btn-money" type="button">9 900 ₽</button>
+              <button class="btn btn-price" type="button">9 900 ₽</button>
             </p>
-          </div> -->
+          </div>
         </li>
-        <li>
+        <li class="template-sample-item">
           <h3>Бaрбершоп «Borodinski»</h3>
           <p>
             <img src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон Barbershop «Borodinski»">
           </p>
-          <!-- <div>
+          <div hidden>
             <a href="#">Barbershop</a>
             <p class="template-describe"> Сайт салона красоты.<br>Для мужчин, да.</p>
             <p>
-              <button class="btn btn-money" type="button">9 900 ₽</button>
+              <button class="btn btn-price" type="button">9 900 ₽</button>
             </p>
-          </div> -->
+          </div>
         </li>
-        <li>
+        <li class="template-sample-item">
           <h3>«Mishka»</h3>
           <p>
             <img src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон «Mishka»">
           </p>
-          <!-- <div>
+          <div hidden>
             <a href="#">MISHKA</a>
             <p class="template-describe"> Интернет-магазин <br>вязаных игрушек</p>
             <p>
-              <button class="btn btn-money" type="button">9 900 ₽</button>
+              <button class="btn btn-price" type="button">9 900 ₽</button>
             </p>
-          </div> -->
+          </div>
         </li>
-        <li>
+        <li class="template-sample-item">
           <h3>«A Plus»</h3>
           <p>
             <img src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон «A Plus»">
           </p>
-          <!-- <div>
+          <div hidden>
             <a href="#">A Plus</a>
             <p class="template-describe"> Лендинг курсов повышения<br>квалификации</p>
             <p>
-              <button class="btn btn-money" type="button">9 900 ₽</button>
+              <button class="btn btn-price" type="button">9 900 ₽</button>
             </p>
-          </div> -->
+          </div>
         </li>
         <li>
           <h3>«Кваст»</h3>
           <p>
             <img src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон «Кваст»">
           </p>
-          <!-- <div>
+          <div hidden>
             <a href="#">КВАСТ</a>
             <p> Промо-сайт производителя<br>крафтового кваса</p>
             <p>
-              <button class="btn btn-money" type="button">9 900 ₽</button>
+              <button class="btn btn-price" type="button">9 900 ₽</button>
             </p>
-          </div> -->
+          </div>
         </li>
       </ul>
       <ul class="pagination-list">
@@ -214,14 +231,14 @@
   </main>
   <footer class="main-footer">
     <section class="footer-contacts">
-      <h2>Как нас найти</h2>
+      <h2 class="visually-hidden">Как нас найти</h2>
       <p class="contacts-name">NЁRDS DESIGN STUDIO</p>
       <p class="contacts-adress">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8 </p>
       <p> тел. <a class="footer-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-      <a class="btn contacts-btn" href="#">Напишите нам</a>
+      <a class="btn" href="#">Напишите нам</a>
     </section>
     <section class="footer-social">
-      <h2>Давайте дружить!</h2>
+      <h2 class="visually-hidden">Давайте дружить!</h2>
       <ul class="social-list">
         <li>
           <a class="social-button" href="#"><img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"></a>
@@ -229,7 +246,8 @@
         <li>
           <a class="social-button" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a>
         </li>
-        <li><a class="social-button" href="#"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
+        <li>
+          <a class="social-button" href="#"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
           </a>
         </li>
       </ul>
@@ -239,5 +257,6 @@
       </div>
     </section>
   </footer>
+</body>
 
 </html>
