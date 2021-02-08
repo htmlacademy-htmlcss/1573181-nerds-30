@@ -15,7 +15,7 @@
 
 <body class="page-body">
   <header class="main-header">
-    <!-- <div class="wrapper"> /*Обертка грида*/ -->
+    <div class="wrap-nav">
     <a class="logo" href="#">
       <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
     </a>
@@ -28,12 +28,11 @@
       </ul>
     </nav>
     <a class="site-cart" href="#"><img src="img/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a>
-    <!-- </div> -->
+    </div>
   </header>
   <main class="container">
     <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
-    <!-- <div class="wrap">   Обертки грида
-      <div class="wrap-features"> -->
+    <div class="wrap-features">
     <section class="features">
       <h2 class="visually-hidden">Наши особенности</h2>
       <ul class="slider-list">
@@ -57,7 +56,7 @@
         <li class="slider-nav-item">
           <button class="slider-nav-btn" type="button">First slide</button>
         </li>
-        <li class="slider--nav-item">
+        <li class="slider-nav-item">
           <button class="slider-nav-btn" type="button">Second slide</button>
         </li>
         <li class="slider-nav-item">
@@ -65,15 +64,14 @@
         </li>
       </ul>
     </section>
-    <!-- </div> -->
-    <!-- <div class="wrap-container"> обертка грида -->
+    </div>
     <section class="offer">
       <h2 class="visually-hidden">Наши предложения</h2>
       <ul class="offer-list">
         <li class="offer-item item-site">
           <h3 class="title title-site">Веб-сайты</h3>
           <p>Мир никогда не будет прежним<br>после того как увидит ваш сайт!</p>
-          <a class="btn" href="#">Заказать</a>
+          <a class="btn btn-default" href="#">Заказать</a>
         </li>
         <li class="offer-item item-program">
           <h3 class="title title-program">Приложения</h3>
@@ -104,22 +102,20 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <img src="img/nerds-illustration.png" width="360" height="208" alt= "Логотип «Нёрдс» на цветном фоне">
         <h3 class="title info-benefits-title">С 2004 года любим точность во всем:</h3>
-        <!-- <div class="procent-wrap"> обертка грида -->
-        <ul class="procent-list">
+        <ul class="percent-list">
           <li>
-            <p class="procent">146<span class="sign-procent">%</span></p>
+            <p class="percent">146<span class="sign-percent">%</span></p>
             <p class="lead">Уровень<br>самoотдачи</p>
           </li>
           <li>
-            <p class="procent">100<span class="sign-procent">%</span></p>
+            <p class="percent">100<span class="sign-percent">%</span></p>
             <p class="lead">Соблюдение<br>сроков</p>
           </li>
           <li>
-            <p class="procent">50<span class="sign-procent">%</span></p>
+            <p class="percent">50<span class="sign-percent">%</span></p>
             <p class="lead">Минимальная<br>предоплата</p>
           </li>
         </ul>
-        <!-- </div> -->
       </section>
     </div>
     <section class="partners">
@@ -146,23 +142,19 @@
         </li>
       </ul>
     </section>
-    <!-- </div> -->
   </main>
   <footer class="main-footer">
-    <!-- <div class="footer-map"> -->
-      <!-- <div class="fotter-wrap"> обертка грида -->
+    <div class="wrap-map">
       <section class="footer-contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
         <p class="contacts-name">NЁRDS DESIGN STUDIO</p>
         <p class="contacts-adress">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8 </p>
         <p> тел. <a class="footer-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-        <a class="btn" href="#">Напишите нам</a>
+        <a class="btn btn-contacts" href="#">Напишите нам</a>
       </section>
-      <!-- </div> -->
-    <!-- </div> -->
+    </div>
     <section class="footer-social">
       <h2 class="visually-hidden">Давайте дружить!</h2>
-      <!-- <div class="social-slogan-wrap"> обертка грида -->
       <ul class="social-list">
         <li>
           <a class="social-button" href="#"><img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"></a>
@@ -179,7 +171,6 @@
         <p class="footer-quote">Давайте дружить, это выгодно!</p>
         <p class="footer-promotion">Скидка 10% для друзей из социальных сетей.</p>
       </div>
-      <!-- </div> -->
     </section>
   </footer>
   <section class="modal" hidden>
@@ -197,7 +188,7 @@
         <label class="modal-form" for="message-field">Текст письма:</label>
         <input id="message-field" type="text" name="message" placeholder="В свободной форме">
       </p>
-      <button class="btn" type="submit">Отправить</button>
+      <button class="btn modal-btn" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
