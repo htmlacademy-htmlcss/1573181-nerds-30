@@ -146,10 +146,6 @@ img {
 
 /*Main logo*/
 
-.logo img {
-  width: 160px;
-}
-
 .logo:hover {
   opacity: 0.7;
 }
@@ -186,10 +182,6 @@ img {
   font-weight: 500;
   color: var(--title-color);
   text-transform: uppercase;
-}
-
-.site-cart {
-  width: 15px;
 }
 
 .site-navigation .active {
@@ -275,8 +267,22 @@ width: 240px;
   line-height: 30px;
 }
 
-.offer-item img {
+.item-site {
+  background: var(--basic-red) url("../img/illustration-1.png");
   width: 300px;
+  height: 146px;
+}
+
+.item-program {
+  background: var(--basic-green) url("../img/illustration-2.png");
+  width: 300px;
+  height: 146px;
+}
+
+.item-visual {
+  background: var(--basic-yellow) url("../img/illustration-3.png");
+  width: 300px;
+  height: 146px;
 }
 
 .offer .btn {
@@ -373,10 +379,6 @@ width: 240px;
   color: var(--title-color);
 }
 
-.info-benefits img {
-  width:360px;
-}
-
 /* Main partners*/
 
 /* .partners {
@@ -392,22 +394,6 @@ width: 240px;
 /*
 .partners-item {
   justify-self: center; */
-
-.academy-logo {
-  width: 199px;
-}
-
-.barbershop-logo {
-  width: 209px;
-}
-
-.pink-logo {
-  width: 185px;
-}
-
-.mishka-logo {
-  width: 173px;
-}
 
 .partners-list a {
   opacity: 0.2;
@@ -446,7 +432,7 @@ width: 240px;
 
 .footer-contacts {
   background: var(--basic-grey) url("../img/map.png");
-  /* width: 1440px; */
+  min-width: 1440px;
   height: 416px;
   background-size: cover;
 }
@@ -652,10 +638,6 @@ width: 240px;
 } */
 
 /* Template - sample*/
-
-.template-sample-list img {
-  width: 358px;
-}
 
 .template-sample-list a:hover {
   color: var(--basic-red);
