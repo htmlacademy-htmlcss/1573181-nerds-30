@@ -136,7 +136,7 @@ img {
 .slider-list,
 .slider-nav-list,
  .offer-list,
- .procent-list,
+ .percent-list,
 .partners-list,
 .social-list,
 .filter-grid,
@@ -201,7 +201,6 @@ img {
 /* Main features */
 
 .features {
-  grid-column:1/-1;
   width: 1158px;
   margin:0 auto;
   padding: 0;
@@ -315,14 +314,10 @@ width: 240px;
 
 .info {
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content 1fr;
   width: 1158px;
   margin:0 auto;
   padding: 0;
-}
-
-.info-projects{
-  width: 651px;
 }
 
 .info-benefits {
@@ -394,12 +389,7 @@ width: 240px;
 
 /* Main-footer*/
 
-.main-footer {
-  display:grid;
- }
-
 .footer-contacts {
-  grid-column: 1/-1;
   width: 1158px;
   margin: 0 auto;
   padding: 0;
@@ -431,14 +421,13 @@ width: 240px;
 
 .footer-social {
   display:grid;
-  grid-template-columns: 1fr 660px;
+  grid-template-columns: 1fr max-content;
   width: 1158px;
   margin: 0 auto;
   padding: 0;
 }
 
 .social-list {
-  width: 300px;
   justify-self: start;
   margin: 0;
   padding: 0;
