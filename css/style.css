@@ -125,7 +125,7 @@ img {
 
 .main-header,
 .wrap-features,
-.store-title
+.store-title-wrap
  {
   background-color: var(--basic-grey);
 }
@@ -162,17 +162,14 @@ img {
 .wrap-nav {
   display:grid;
   grid-template-columns: 160px 1fr 115px;
-  width: 1158px;
-  margin:0 auto;
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
   padding: 0;
 }
 
 .site-cart {
   justify-self: end;
-}
-
-.site-navigation {
-  justify-self: center;
 }
 
 .site-navigation a,
@@ -201,8 +198,9 @@ img {
 /* Main features */
 
 .features {
-  width: 1158px;
-  margin:0 auto;
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -242,9 +240,10 @@ width: 240px;
 
 .offer {
 
-  width: 1158px;
-  margin:0 auto ;
-  padding:0;
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0;
   margin-bottom: 80px; /*Временный отступ,чтобы было видно кнопку*/
   }
 
@@ -314,9 +313,10 @@ width: 240px;
 
 .info {
   display:grid;
-  grid-template-columns: max-content 1fr;
-  width: 1158px;
-  margin:0 auto;
+  grid-template-columns:  1fr max-content;
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -365,9 +365,10 @@ width: 240px;
 .partners-list {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 1158px;
-  margin:0 auto ;
-  padding:0;
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0;
   column-gap: 40px;
 }
 
@@ -390,7 +391,8 @@ width: 240px;
 /* Main-footer*/
 
 .footer-contacts {
-  width: 1158px;
+  width: 100%;
+  max-width: 1158px;
   margin: 0 auto;
   padding: 0;
 }
@@ -421,8 +423,9 @@ width: 240px;
 
 .footer-social {
   display:grid;
-  grid-template-columns: 1fr max-content;
-  width: 1158px;
+  grid-template-columns: max-content 1fr;
+  width: 100%;
+  max-width: 1158px;
   margin: 0 auto;
   padding: 0;
 }
@@ -432,6 +435,11 @@ width: 240px;
   margin: 0;
   padding: 0;
 }
+
+.footer-slogan {
+  margin-left: 139px; /* Значение может поменяться после оформление социальных кнопок*/
+}
+
 
 .footer-quote {
   font-weight: 700;
@@ -548,6 +556,11 @@ width: 240px;
   font-size: 55px;
   line-height: 55px;
   color: var(--title-color);
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0;
+  text-align:center;
 }
 
 /* Filter*/
