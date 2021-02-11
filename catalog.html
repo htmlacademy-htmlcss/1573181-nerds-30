@@ -37,13 +37,15 @@
     <div class="catalog-wrap">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <h3 class="title title-cost">Стоимость:</h3>
-        <form>
-          <div>
-            <input type="range" min="0" max="40000">
-          </div>
-          от <input type="number" step="1" min="0" placeholder="0">
-          до <input type="number" step="1" max="40000" placeholder="15000">
+        <form class="price-selection">
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <div>
+              <input type="range" min="0" max="40000">
+            </div>
+            от <input type="number" step="1" min="0" placeholder="0">
+            до <input type="number" step="1" max="40000" placeholder="15000">
+          </fieldset>
         </form>
         <form class="filter-form" method="get" action="https://echo.htmlacademy.ru/">
           <fieldset class="field">
@@ -93,46 +95,47 @@
       </section>
       <section class="template">
         <h2 class="visually-hidden">Список шаблонов</h2>
+
         <form>
           <fieldset>
-            <legend class="sorting">Сортировать:</legend>
-            <ul class="variant">
-              <li class="variant-item">
-                <input type="radio" name="inset" value="price" id="inset-price" checked>
-                <label for="inset-price">По цене </label>
-              </li>
-              <li>
-                <input type="radio" name="inset" value="type" id="inset-type">
-                <label for="inset-type">По типу</label>
-              </li>
-              <li>
-                <input type="radio" name="inset" value="title" id="inset-title">
-                <label for="inset-title">По названию</label>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <ul class="route">
-              <li>
-                <input type="radio" name="choice" value="down" id="choice-down" checked>
-                <label for="choice-down">
-                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.2">
-                      <path d="M5.5 10L0 0H11" fill="#A6A6A6" />
-                    </g>
-                  </svg>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="choice" value="up" id="choice-up">
-                <label for="choice-up">
-                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.2">
-                      <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
-                    </g>
-                  </svg>
-                </label>
-              </li>
-            </ul>
+            <div class="sorting-wrap">
+              <legend class="sorting">Сортировать:</legend>
+              <ul class="variant">
+                <li class="variant-item">
+                  <input type="radio" name="inset" value="price" id="inset-price" checked>
+                  <label for="inset-price">По цене </label>
+                </li>
+                <li>
+                  <input type="radio" name="inset" value="type" id="inset-type">
+                  <label for="inset-type">По типу</label>
+                </li>
+                <li>
+                  <input type="radio" name="inset" value="title" id="inset-title">
+                  <label for="inset-title">По названию</label>
+              </ul>
+              <ul class="route">
+                <li>
+                  <input type="radio" name="choice" value="down" id="choice-down" checked>
+                  <label for="choice-down">
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g opacity="0.2">
+                        <path d="M5.5 10L0 0H11" fill="#000000" />
+                      </g>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="choice" value="up" id="choice-up">
+                  <label for="choice-up">
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g opacity="0.2">
+                        <path d="M5.5 0L0 10H11L5.5 0Z" fill="#000000" />
+                      </g>
+                    </svg>
+                  </label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
         </form>
         <ul class="template-sample-list">
