@@ -115,12 +115,6 @@ img {
   box-shadow: inset 0px 3px 0px var(--shadow-color);
 }
 
-/* Grid */
-
-.page {
-  height: 100%;
-}
-
 /*Main-background*/
 
 .main-header,
@@ -141,11 +135,19 @@ img {
 .social-list,
 .filter-grid,
 .filter-details,
+.variant,
 .template-sample-list,
 .pagination-list
 {
   list-style: none;
 }
+
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
 
 /*Main logo*/
 
@@ -536,11 +538,7 @@ width: 240px;
 
 /*Prevailing text*/
 
-.title-cost {
-  font-size: 18px;
-  line-height: 30px;
-}
-
+.price-selection legend,
 .filter-form legend,
 .sorting,
 .template-sample-item a {
@@ -550,6 +548,20 @@ width: 240px;
   color: var(--title-color);
   text-transform: uppercase;
 }
+
+/* Grid */
+
+.catalog-wrap {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0;
+  column-gap: 40px;
+}
+
+/* Store */
 
 .store-title {
   font-weight: 500;
@@ -563,7 +575,7 @@ width: 240px;
   text-align:center;
 }
 
-/* Filter*/
+/* Filter */
 
 .filter-form {
   line-height: 20px;
@@ -593,6 +605,18 @@ width: 240px;
 
 /*Template filter*/
 
+.sorting-wrap {
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  margin: 0;
+  padding: 0;
+}
+
+.variant,
+.route {
+  justify-self: end;
+}
+
 .variant li,
 .route li {
   display: inline;
@@ -609,7 +633,7 @@ width: 240px;
   color: var(--logo-push);
   opacity: 0.2;
 }
-/* настройки  (строки 611-629 )route поменяются, т.к. input*/
+/* настройки  (строки 629-647 )route поменяются, т.к. input*/
 
 /* .variant li:hover {
   color: var(--title-color);
@@ -630,6 +654,18 @@ width: 240px;
 } */
 
 /* Template - sample*/
+
+.template-sample-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.template-sample-item {
+  justify-self: end;
+}
 
 .template-sample-list a:hover {
   color: var(--basic-red);
