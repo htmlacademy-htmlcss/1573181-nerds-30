@@ -538,11 +538,7 @@ width: 240px;
 
 /*Prevailing text*/
 
-.title-cost {
-  font-size: 18px;
-  line-height: 30px;
-}
-
+.price-selection legend,
 .filter-form legend,
 .sorting,
 .template-sample-item a {
@@ -562,6 +558,7 @@ width: 240px;
   max-width: 1158px;
   margin: 0 auto;
   padding: 0;
+  column-gap: 40px;
 }
 
 /* Store */
@@ -608,6 +605,18 @@ width: 240px;
 
 /*Template filter*/
 
+.sorting-wrap {
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  margin: 0;
+  padding: 0;
+}
+
+.variant,
+.route {
+  justify-self: end;
+}
+
 .variant li,
 .route li {
   display: inline;
@@ -652,7 +661,10 @@ width: 240px;
   column-gap: 40px;
   margin: 0 auto;
   padding: 0;
-  margin-left: 141px;
+}
+
+.template-sample-item {
+  justify-self: end;
 }
 
 .template-sample-list a:hover {
