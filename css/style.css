@@ -27,6 +27,7 @@
   --detecting-status: #DFDFDF;
   --push-status: #D5D5D5;
   --btn-icon: #4D4D4D;
+  --btn-slider: #C1C1C1;
 
   /*Background*/
 
@@ -103,6 +104,8 @@ img {
   border: 0;
   height: 50px;
   border-radius: 3px;
+  padding-top: 17px;
+  padding-bottom: 15px;
 }
 
 .btn:hover {
@@ -129,17 +132,16 @@ img {
 .site-navigation,
 .slider-list,
 .slider-nav-list,
- .offer-list,
- .percent-list,
-.partners-list,
+.percent-list,
 .social-list,
 .filter-grid,
 .filter-details,
 .variant,
-.template-sample-list,
 .pagination-list
 {
   list-style: none;
+  margin:0;
+  padding:0;
 }
 
 /* Grid */
@@ -162,16 +164,12 @@ img {
 /* Main navigation */
 
 .wrap-nav {
-  display:grid;
-  grid-template-columns: 160px 1fr 115px;
+  display: flex;
   width: 100%;
   max-width: 1158px;
   margin: 0 auto;
   padding: 0;
-}
-
-.site-cart {
-  justify-self: end;
+  justify-content: space-between;
 }
 
 .site-navigation a,
@@ -197,6 +195,14 @@ img {
   opacity:0.3
 }
 
+.site-navigation {
+  display: flex;
+}
+
+.site-navigation li {
+  margin-right: 45px;
+}
+
 /* Main features */
 
 .features {
@@ -204,6 +210,12 @@ img {
   max-width: 1158px;
   margin: 0 auto;
   padding: 0;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.slider-item {
+  align-items: center;
 }
 
 .features-slider-slogan {
@@ -213,17 +225,14 @@ img {
   color: var(--title-color);
 }
 
-.slider-list {
-  padding:0;
-}
-
 .features-slider-btn {
-width: 240px;
+  width: 240px;
 }
 
 .slider-item {
   width: 760px;
   height: 431px;
+
 }
 
 .slider-item:first-child {
@@ -238,16 +247,33 @@ width: 240px;
   background-image: url("../img/index-slide-3.png");
 }
 
+.slider-nav-btn {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: var(--btn-color);
+  box-sizing: border-box;
+}
+
+.slider-nav-btn-active:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--btn-slider);
+  box-sizing: border-box;
+
+}
+
 /* Main offer */
 
 .offer {
-
   width: 100%;
   max-width: 1158px;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 80px; /*Временный отступ,чтобы было видно кнопку*/
-  }
+}
 
 .offer-list {
   display:grid;
@@ -255,7 +281,9 @@ width: 240px;
   column-gap: 40px;
   margin:0;
   padding:0;
+  list-style: none;
 }
+
 
 .offer .title {
   font-size: 24px;
@@ -314,23 +342,18 @@ width: 240px;
 /* Main info */
 
 .info {
-  display:grid;
-  grid-template-columns:  1fr max-content;
+  display:flex;
+  justify-content: space-between;
   width: 100%;
   max-width: 1158px;
   margin: 0 auto;
   padding: 0;
-}
-
-.info-benefits {
-  justify-self: end;
+  margin-top: 73px;
 }
 
 .percent-list{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin:0;
-  padding:0;
 }
 
 .info-projects-resume {
@@ -365,17 +388,29 @@ width: 240px;
 /* Main partners*/
 
 .partners-list {
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display:flex;
   width: 100%;
   max-width: 1158px;
   margin: 0 auto;
   padding: 0;
-  column-gap: 40px;
+  list-style: none;
+  justify-content: center;
 }
 
-.partners-item {
-  justify-self: center;
+.partners-item:first-child {
+  margin-left: 32px;
+}
+
+.partners-item:nth-child(2){
+  margin-left: 95px;
+}
+
+.partners-item:nth-child(3){
+  margin-left: 104px;
+}
+
+.partners-item:last-child{
+  margin-left: 120px;
 }
 
 .partners-list a {
@@ -421,6 +456,8 @@ width: 240px;
 
 .btn-contacts {
   width: 219px;
+  padding-top: 16px;
+  padding-bottom: 16px; /* Проверить*/
 }
 
 .footer-social {
@@ -434,16 +471,15 @@ width: 240px;
 
 .social-list {
   justify-self: start;
-  margin: 0;
-  padding: 0;
 }
 
 .footer-slogan {
-  margin-left: 139px; /* Значение может поменяться после оформление социальных кнопок*/
+  margin-left: 130px;
+  margin-top:75px;
 }
 
-
 .footer-quote {
+  margin: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
@@ -451,12 +487,26 @@ width: 240px;
 }
 
 .footer-promotion {
+  margin-top: 10px;
   line-height: 22px;
   color: var(--footer-text);
 }
 
+.social-list {
+  display: flex;
+}
+
 .social-button {
+  margin-top: 68px;
+  border-radius: 50% ;
+  width: 81px;
+  height: 81px;
   background: var(--social-fone);
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 9px;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-button:hover {
@@ -661,6 +711,7 @@ width: 240px;
   column-gap: 40px;
   margin: 0 auto;
   padding: 0;
+  list-style: none;
 }
 
 .template-sample-item {
