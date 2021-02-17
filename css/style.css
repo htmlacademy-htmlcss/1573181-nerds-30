@@ -170,6 +170,7 @@ img {
   margin: 0 auto;
   padding: 0;
   justify-content: space-between;
+  margin-bottom:13px;
 }
 
 .site-navigation a,
@@ -227,12 +228,13 @@ img {
 
 .features-slider-btn {
   width: 240px;
+  padding-left: 54px;
+  padding-right: 54px;
 }
 
 .slider-item {
   width: 760px;
   height: 431px;
-
 }
 
 .slider-item:first-child {
@@ -248,11 +250,13 @@ img {
 }
 
 .slider-nav-btn {
+  position: relative;
   border-radius: 50%;
   width: 18px;
   height: 18px;
   background-color: var(--btn-color);
   box-sizing: border-box;
+  border:0;
 }
 
 .slider-nav-btn-active:before {
@@ -263,7 +267,6 @@ img {
   height: 8px;
   border: 2px solid var(--btn-slider);
   box-sizing: border-box;
-
 }
 
 /* Main offer */
@@ -282,17 +285,22 @@ img {
   margin:0;
   padding:0;
   list-style: none;
+  margin-bottom: 281px;
 }
-
 
 .offer .title {
   font-size: 24px;
   line-height: 30px;
+  margin-top:171px;
 }
 
 .offer-item {
   width: 300px;
   height: 146px;
+}
+.offer p {
+  margin-top: 32px;
+  margin-bottom: 49px;
 }
 
 .item-site {
@@ -309,6 +317,8 @@ img {
 
 .offer .btn {
   width: 160px;
+  padding-left: 39px;
+  padding-right: 40px;
 }
 
 .btn-green {
@@ -348,7 +358,9 @@ img {
   max-width: 1158px;
   margin: 0 auto;
   padding: 0;
-  margin-top: 73px;
+  margin-bottom:73px;
+  border-top: 2px solid var(--basic-grey);
+  padding-top: 73px;
 }
 
 .percent-list{
@@ -395,6 +407,11 @@ img {
   padding: 0;
   list-style: none;
   justify-content: center;
+  margin-bottom: 80px;
+  border-top: 2px solid var(--basic-grey);
+  border-bottom: 2px solid var(--basic-grey);
+  padding-top:46px;
+  padding-bottom: 44px;
 }
 
 .partners-item:first-child {
@@ -427,11 +444,20 @@ img {
 
 /* Main-footer*/
 
+.contact-wrap {
+  width: 219px;
+  height: 308px;
+  background-color: var(--btn-color);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .footer-contacts {
   width: 100%;
   max-width: 1158px;
   margin: 0 auto;
   padding: 0;
+  padding-top:54px;
 }
 
 .contacts-name {
@@ -439,12 +465,24 @@ img {
   font-size: 18px;
   line-height: 30px;
   color: var(--title-color);
+  padding-top:49px;
+  margin: 0;
+}
+
+.contacts-adress {
+padding-top:23px;
+margin: 0;
 }
 
 .contacts-adress,
-.footer-phone {
+.footer-phone,
+.telephone{
   line-height: 18px;
   color: var(--adress-color);
+}
+
+.telephone {
+  margin-bottom:54px;
 }
 
 .wrap-map {
@@ -456,8 +494,7 @@ img {
 
 .btn-contacts {
   width: 219px;
-  padding-top: 16px;
-  padding-bottom: 16px; /* Проверить*/
+  padding: 16px 44px;
 }
 
 .footer-social {
