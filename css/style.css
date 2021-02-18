@@ -287,7 +287,6 @@ img {
   width: 18px;
   height: 18px;
   background-color: var(--btn-color);
-  box-sizing: border-box;
   margin-right: 22px;
   cursor: pointer;
 }
@@ -299,7 +298,6 @@ img {
   width: 8px;
   height: 8px;
   border: 2px solid var(--btn-slider);
-  box-sizing: border-box;
   top: 5px;
   left:5px;
 }
@@ -657,11 +655,7 @@ img {
 .catalog-wrap {
   display: grid;
   grid-template-columns: 260px 1fr;
-  width: 100%;
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0;
-  column-gap: 40px;
+  column-gap: 140px;
 }
 
 /* Store */
@@ -671,17 +665,55 @@ img {
   font-size: 55px;
   line-height: 55px;
   color: var(--title-color);
-  width: 100%;
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0;
-  text-align:center;
+  padding-top: 87px;
+  padding-bottom: 108px;
+  padding-left: 237px;
 }
 
 /* Filter */
 
+.filter {
+  margin-top: 55px;
+}
+
+.price-range {
+  border:0;
+  padding: 0;
+  margin: 0;
+}
+
+.runner {
+  width: 260px;
+  height: 80px;
+  background-color: var(--basic-grey);
+  border-radius: 3px;
+  padding-top:30px;
+  padding-left: 33px;
+  margin-top: 48px;
+}
+
+.price-value {
+  display: flex;
+}
+
+.price-value input {
+  width: 80px;
+  height: 38px;
+  border: 0;
+  border-radius: 3px;
+  background-color: var(--basic-grey);
+  margin-top: 14px;
+}
+
 .filter-form {
   line-height: 20px;
+  margin-top: 54px;
+}
+
+.field {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 .filter-form li {
@@ -689,6 +721,8 @@ img {
 }
 
 .btn-grey {
+  width: 260px;
+  margin-top: 48px;
   background-color: var(--basic-grey);
   color: var(--title-color);
 }
@@ -708,11 +742,23 @@ img {
 
 /*Template filter*/
 
+.sorting-field {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  margin-top: 55px;
+}
+
 .sorting-wrap {
   display: grid;
   grid-template-columns: min-content 1fr max-content;
-  margin: 0;
+  align-items: top;
+}
+
+.route {
   padding: 0;
+  margin: 0;
+  margin-left: 47px;
 }
 
 .variant,
@@ -735,6 +781,7 @@ img {
 .route li {
   color: var(--logo-push);
   opacity: 0.2;
+
 }
 /* настройки  (строки 629-647 )route поменяются, т.к. input*/
 
@@ -771,6 +818,23 @@ img {
   justify-self: end;
 }
 
+.information {
+  width: 360px;
+  height: 231px;
+  background-color: var(--basic-grey);
+  text-align: center;
+  padding-top: 26px;
+}
+
+.template-describe {
+  margin-top: 12px;
+}
+
+.price-btn {
+  margin-top: 32px;
+  margin-left: 80px;
+}
+
 .template-sample-list a:hover {
   color: var(--basic-red);
 }
@@ -793,11 +857,29 @@ img {
   color: var(--adress-color);
 }
 
+.pagination-list {
+  display:flex;
+  margin-top: 55px;
+  margin-bottom: 60px;
+}
+
 .pagination-list a {
+  display: block;
+  min-width: 50px;
+  height: 50px;
   font-weight: 500;
   line-height: 18px;
   color: var(--title-color);
+  text-align: center;
   background-color: var(--basic-grey);
+  margin-right: 11px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  border-radius: 3px;
+}
+
+.next{
+  width: 260px;
 }
 
 .pagination-list a:hover {
@@ -809,6 +891,8 @@ img {
   background-color: var(--push-status);
   box-shadow: inset 0px 3px 0px var(--shadow-color);
 }
+
+
 
 .pagination-current a,
 .pagination-current a:hover,
