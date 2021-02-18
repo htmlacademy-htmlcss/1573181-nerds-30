@@ -60,6 +60,12 @@
 
 /* Global */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .visually-hidden {
   display: none;       /* Временно скрытые  ненужные заголовки*/
 }
@@ -94,6 +100,8 @@ img {
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px ;
   font-weight: 500;
@@ -229,13 +237,11 @@ img {
 
 .slogan-exposition {
   margin:0;
-  margin-bottom: 55px;
+  margin-bottom: 38px;
 }
 
 .features-slider-btn {
   width: 240px;
-  padding-left: 54px;
-  padding-right: 54px;
 }
 
 .slider-item {
@@ -243,9 +249,8 @@ img {
   width: 100%;
   height: 431px;
   padding-top: 78px;
-  background-position: right center;
+  background-position: right bottom;
   background-repeat: no-repeat;
-
 }
 
 .slider-item-current {
@@ -268,8 +273,9 @@ img {
   display: flex;
   align-items: center;
   position: absolute;
-  margin-left: 536px;
-  margin-top: -105px;
+  bottom: 96px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -283,7 +289,7 @@ img {
   background-color: var(--btn-color);
   box-sizing: border-box;
   margin-right: 22px;
-
+  cursor: pointer;
 }
 
 .slider-nav-btn-active:before {
@@ -303,11 +309,12 @@ img {
 .offer-list {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 40px;
+  column-gap: 100px;
   margin:0;
   padding:0;
   list-style: none;
-  margin-bottom: 95px;
+  margin-bottom: 80px;
+  padding-right: 60px;
 }
 
 .offer .title {
@@ -319,37 +326,33 @@ img {
 
 .offer p {
   margin-top: 16px;
-  margin-bottom: 49px;
+  margin-bottom: 32px;
+}
+
+.offer-item:before {
+  content:"";
+  display:block;
+  width:100%;
+  height:146px;
 }
 
 .item-site:before {
   content:"";
-  display:block;
   background: var(--basic-red) url("../img/illustration-1.png") no-repeat center;
-  width:300px;
-  height:146px;
 }
 
 .item-program:before {
   content:"";
-  display:block;
-  background: var(--basic-green) url("../img/illustration-2.png") no-repeat center;
-  width:300px;
-  height:146px;
+  background: var(--basic-green) url("../img/illustration-2.png")no-repeat center ;
 }
 
 .item-visual:before {
   content:"";
-  display: block;
   background: var(--basic-yellow) url("../img/illustration-3.png") no-repeat center;
-  width:300px;
-  height:146px;
 }
 
 .offer .btn {
   width: 160px;
-  padding-left: 39px;
-  padding-right: 40px;
 }
 
 .btn-green {
@@ -431,6 +434,7 @@ img {
   display:flex;
   list-style: none;
   justify-content: center;
+  align-items: center;
   margin-bottom: 80px;
   border-top: 2px solid var(--basic-grey);
   border-bottom: 2px solid var(--basic-grey);
@@ -438,19 +442,19 @@ img {
   padding-bottom: 44px;
 }
 
-.partners-item:first-child {
+.academy-logo {
   margin-left: 32px;
 }
 
-.partners-item:nth-child(2){
+.barbershop-logo{
   margin-left: 95px;
 }
 
-.partners-item:nth-child(3){
+.pink-logo{
   margin-left: 104px;
 }
 
-.partners-item:last-child{
+.mishka-logo{
   margin-left: 120px;
 }
 
@@ -469,7 +473,7 @@ img {
 /* Main-footer*/
 
 .contact-wrap {
-  width: 219px;
+  width: 319px;
   height: 308px;
   background-color: var(--btn-color);
   padding-left: 50px;
@@ -494,8 +498,8 @@ img {
 }
 
 .contacts-adress {
-padding-top:23px;
-margin: 0;
+  padding-top:23px;
+  margin: 0;
 }
 
 .contacts-adress,
@@ -506,12 +510,11 @@ margin: 0;
 }
 
 .telephone {
-  margin-bottom:54px;
+  margin-bottom:32px;
 }
 
 .btn-contacts {
   width: 219px;
-  padding: 16px 44px;
 }
 
 .footer-social {
