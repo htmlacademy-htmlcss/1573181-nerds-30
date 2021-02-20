@@ -114,6 +114,7 @@ img {
   border-radius: 3px;
   padding-top: 17px;
   padding-bottom: 15px;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -319,11 +320,10 @@ img {
   font-size: 24px;
   line-height: 30px;
   margin:0;
-  margin-top: 25px;
+  margin-bottom: 16px;
 }
 
 .offer p {
-  margin-top: 16px;
   margin-bottom: 32px;
 }
 
@@ -332,6 +332,8 @@ img {
   display:block;
   width:100%;
   height:146px;
+  margin-bottom: 25px;
+
 }
 
 .item-site:before {
@@ -484,7 +486,7 @@ img {
   /* min-width: 1440px; */
   height: 416px;
   background-size: cover;
-  }
+}
 
 .contacts-name {
   font-weight: 700;
@@ -535,10 +537,10 @@ img {
   font-size: 36px;
   line-height: 36px;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
 
 .footer-promotion {
-  margin-top: 10px;
   line-height: 22px;
   color: var(--footer-text);
 }
@@ -660,14 +662,18 @@ img {
 
 /* Store */
 
+.store-title-wrap {
+  padding-top: 87px;
+  padding-bottom: 108px;
+}
+
 .store-title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
   color: var(--title-color);
-  padding-top: 87px;
-  padding-bottom: 108px;
-  padding-left: 237px;
+  text-align: center;
+  margin: 0;
 }
 
 /* Filter */
@@ -680,6 +686,11 @@ img {
   border:0;
   padding: 0;
   margin: 0;
+  margin-bottom: 54px;
+}
+
+.price-range legend{
+  margin-bottom: 48px;
 }
 
 .runner {
@@ -689,11 +700,14 @@ img {
   border-radius: 3px;
   padding-top:30px;
   padding-left: 33px;
-  margin-top: 48px;
+  margin-bottom: 14px;
 }
 
 .price-value {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 22px;
 }
 
 .price-value input {
@@ -702,18 +716,19 @@ img {
   border: 0;
   border-radius: 3px;
   background-color: var(--basic-grey);
-  margin-top: 14px;
+  line-height: 22px;
 }
 
 .filter-form {
   line-height: 20px;
-  margin-top: 54px;
+
 }
 
 .field {
   padding: 0;
   margin: 0;
   border: 0;
+  margin-bottom:48px;
 }
 
 .filter-form li {
@@ -722,7 +737,6 @@ img {
 
 .btn-grey {
   width: 260px;
-  margin-top: 48px;
   background-color: var(--basic-grey);
   color: var(--title-color);
 }
@@ -812,6 +826,7 @@ img {
   margin: 0 auto;
   padding: 0;
   list-style: none;
+  margin-bottom: 55px;
 }
 
 .template-sample-item {
@@ -828,10 +843,10 @@ img {
 
 .template-describe {
   margin-top: 12px;
+  margin-bottom: 32px;
 }
 
 .price-btn {
-  margin-top: 32px;
   margin-left: 80px;
 }
 
@@ -859,7 +874,7 @@ img {
 
 .pagination-list {
   display:flex;
-  margin-top: 55px;
+  align-items: center;
   margin-bottom: 60px;
 }
 
@@ -899,4 +914,6 @@ img {
 .pagination-current a:active {
   background-color:  var(--pagination-bg);
   border: 3px solid var(--border-color);
+  padding-top: 14px;
+  padding-bottom: 12px;
 }
