@@ -15,9 +15,9 @@
 
 <body class="page-body">
   <header class="main-header">
-    <div class="wrap-nav">
+    <div class="wrap-nav container">
       <a class="logo" href="#">
-        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип «Нёрдс»">
+        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
       </a>
       <nav class="main-navigation">
         <ul class="site-navigation">
@@ -30,21 +30,25 @@
       <a class="site-cart" href="#"><img src="img/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a>
     </div>
   </header>
-  <main class="container inner-page">
+  <main class="inner-page">
     <div class="store-title-wrap">
+      <div class="container">
       <h1 class="store-title"> Магазин готовых шаблонов</h1>
+      </div>
     </div>
-    <div class="catalog-wrap">
+    <div class="catalog-wrap container">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="price-selection">
-          <fieldset>
+          <fieldset class="price-range">
             <legend>Стоимость:</legend>
-            <div>
+            <div class="runner">
               <input type="range" min="0" max="40000">
             </div>
-            от <input type="number" step="1" min="0" placeholder="0">
-            до <input type="number" step="1" max="40000" placeholder="15000">
+            <div class="price-value">
+              от <input type="number" step="1" min="0" placeholder="0">
+              до <input type="number" step="1" max="40000" placeholder="15000">
+            </div>
           </fieldset>
         </form>
         <form class="filter-form" method="get" action="https://echo.htmlacademy.ru/">
@@ -97,7 +101,7 @@
         <h2 class="visually-hidden">Список шаблонов</h2>
 
         <form>
-          <fieldset>
+          <fieldset class="sorting-field">
             <div class="sorting-wrap">
               <legend class="sorting">Сортировать:</legend>
               <ul class="variant">
@@ -115,7 +119,7 @@
               </ul>
               <ul class="route">
                 <li>
-                  <input type="radio" name="choice" value="down" id="choice-down" checked>
+                  <input type="radio" class="choice" name="choice" value="down" id="choice-down" checked>
                   <label for="choice-down">
                     <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g opacity="0.2">
@@ -125,7 +129,7 @@
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="choice" value="up" id="choice-up">
+                  <input type="radio" class="choice" name="choice" value="up" id="choice-up">
                   <label for="choice-up">
                     <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g opacity="0.2">
@@ -144,7 +148,7 @@
             <p>
               <img src="img/img-sedona.jpg" width="358" height="578" alt="Шаблон «Sedona»">
             </p>
-            <div>
+            <div class="sedona-template information">
               <a href="#">Sedona</a>
               <p class="template-describe"> Информационный сайт <br>для туристов</p>
               <p>
@@ -157,7 +161,7 @@
             <p>
               <img src="img/img-pink.jpg" width="358" height="578" alt="Шаблон «Pink APP»">
             </p>
-            <div hidden>
+            <div class="pink-template information" hidden>
               <a href="#">Pink App</a>
               <p class="template-describe"> Продуктовый лендинг<br>приложения для iOS и Android</p>
               <p>
@@ -170,7 +174,7 @@
             <p>
               <img src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон Barbershop «Borodinski»">
             </p>
-            <div hidden>
+            <div class="barbershop-template information" hidden>
               <a href="#">Barbershop</a>
               <p class="template-describe"> Сайт салона красоты.<br>Для мужчин, да.</p>
               <p>
@@ -183,7 +187,7 @@
             <p>
               <img src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон «Mishka»">
             </p>
-            <div hidden>
+            <div class="mishka-template information" hidden>
               <a href="#">MISHKA</a>
               <p class="template-describe"> Интернет-магазин <br>вязаных игрушек</p>
               <p>
@@ -196,7 +200,7 @@
             <p>
               <img src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон «A Plus»">
             </p>
-            <div hidden>
+            <div class="aplus-template information" hidden>
               <a href="#">A Plus</a>
               <p class="template-describe"> Лендинг курсов повышения<br>квалификации</p>
               <p>
@@ -209,7 +213,7 @@
             <p>
               <img src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон «Кваст»">
             </p>
-            <div hidden>
+            <div class="kvast-template information" hidden>
               <a href="#">КВАСТ</a>
               <p> Промо-сайт производителя<br>крафтового кваса</p>
               <p>
@@ -229,23 +233,25 @@
             <a href="#">3</a>
           </li>
           <li>
-            <a href="#">Следующая</a>
+            <a class="next" href="#">Следующая</a>
           </li>
         </ul>
       </section>
     </div>
   </main>
   <footer class="main-footer">
-    <div class="wrap-map">
-      <section class="footer-contacts">
-        <h2 class="visually-hidden">Как нас найти</h2>
-        <p class="contacts-name">NЁRDS DESIGN STUDIO</p>
-        <p class="contacts-adress">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8 </p>
-        <p> тел. <a class="footer-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-        <a class="btn btn-contacts" href="#">Напишите нам</a>
-      </section>
-    </div>
-    <section class="footer-social">
+    <section class="footer-contacts">
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <div class="container">
+        <div class="contact-wrap">
+          <p class="contacts-name">NЁRDS DESIGN STUDIO</p>
+          <p class="contacts-adress">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8 </p>
+          <p class="telephone"> тел. <a class="footer-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+          <a class="btn btn-contacts" href="#">Напишите нам</a>
+        </div>
+      </div>
+    </section>
+    <section class="footer-social container">
       <h2 class="visually-hidden">Давайте дружить!</h2>
       <ul class="social-list">
         <li>
