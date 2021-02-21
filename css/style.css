@@ -149,6 +149,7 @@ img {
 .site-navigation,
 .slider-list,
 .slider-nav-list,
+.info-projects-list,
 .percent-list,
 .social-list,
 .filter-grid,
@@ -199,7 +200,7 @@ img {
   text-transform: uppercase;
   padding-top: 75px;
   padding-bottom: 9px;
-  padding-right: 45px;
+  padding-left: 40px;
 }
 
 .site-cart{
@@ -213,7 +214,7 @@ img {
   height: 15px;
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
-  left:-25px;
+  left:0;
   bottom: 17px;
 }
 
@@ -268,8 +269,8 @@ img {
 .slider-item {
   display: none;
   width: 100%;
-  height: 431px;
-  padding-top: 78px;
+  height: 423px;
+  padding-top: 70px;
   background-position: right bottom;
   background-repeat: no-repeat;
 }
@@ -308,7 +309,7 @@ img {
   width: 18px;
   height: 18px;
   background-color: var(--btn-color);
-  margin-right: 22px;
+  margin: 0 10px;
   cursor: pointer;
 }
 
@@ -413,6 +414,22 @@ img {
   padding-top: 73px;
 }
 
+.info-projects-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 46px;
+}
+
+.info-projects-item:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-color: var(--basic-red);
+  height: 2px;
+  width: 25px;
+  left:0;
+}
+
 .percent-list{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -424,10 +441,27 @@ img {
   line-height: 45px;
   color: var(--title-color);
   margin: 0;
+  margin-bottom: 32px;
+}
+
+.info-projects-principle {
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .info-project-title {
   color: var(--basic-color);
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.nerds-illustration {
+  margin-bottom: 37px;
+}
+
+.info-benefits-title {
+  margin: 0;
+  margin-bottom: 31px;
 }
 
 .percent{
@@ -435,6 +469,8 @@ img {
   font-size: 45px;
   line-height: 64px;
   color: var(--title-color);
+  margin:0;
+  margin-bottom: 11px;
 }
 
 .lead {
@@ -446,6 +482,7 @@ img {
   font-size: 26px;
   line-height: 40px;
   color: var(--title-color);
+  vertical-align: top;
 }
 
 /* Main partners*/
@@ -456,38 +493,51 @@ img {
   list-style: none;
   justify-content: center;
   align-items: center;
+  padding: 46px 0 44px;
   margin-bottom: 80px;
   border-top: 2px solid var(--basic-grey);
   border-bottom: 2px solid var(--basic-grey);
 }
 
+.partners-item img{
+  display:block;
+}
 .academy-logo {
-  margin-left: 32px;
+  width: 199px;
+  height: auto;
+  /* margin-left: 32px;
   margin-right: 48px;
   padding-top:63px;
-  padding-bottom: 49px;
+  padding-bottom: 49px; */
 }
 
 .barbershop-logo{
-  margin-left: 45px;
+  width: 209px;
+  height: auto;
+  /* margin-left: 45px;
   margin-right: 44px;
   padding-top:46px;
-  padding-bottom: 44px;
+  padding-bottom: 44px; */
 }
 
 .pink-logo{
-  margin-left: 58px;
+  width: 185px;
+  height: auto;
+  /* margin-left: 58px;
   margin-right: 55px;
   padding-top:65px;
-  padding-bottom: 63px;
+  padding-bottom: 63px; */
 }
 .mishka-logo {
-  margin-left: 63px;
+  width: 173px;
+  height: auto;
+  /* margin-left: 63px;
   padding-top:52px;
-  padding-bottom: 44px;
+  padding-bottom: 44px; */
 }
 
-.partners-list a {
+.partners-list a{
+  display: inline-block;
   opacity: 0.2;
 }
 
@@ -498,38 +548,26 @@ img {
 .partners-list a:active {
   opacity: 0.1;
 }
+
 .partners-item {
   position:relative;
+  width: 25%;
+  text-align: center;
 }
 
-.partners-item-akademy:after {
+.partners-item:after {
   content:"";
-  position: relative;
-  display: block;
-  height: 52px;
-  width:2px;
+  position: absolute;
   background-color: var(--basic-grey);
-  left: 100%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 52px;
+  width: 2px;
 }
 
-.partners-item-barbershop:after {
-  content:"";
-  position: relative;
-  display: block;
-  height: 52px;
-  width:2px;
-  background-color: var(--basic-grey);
-  left: 100%;
-}
-
-.partners-item-pink:after {
-  content:"";
-  position: relative;
-  display: block;
-  height: 52px;
-  width:2px;
-  background-color: var(--basic-grey);
-  left: 100%;
+.partners-item:last-child:after {
+  display: none;
 }
 
 /* Main-footer*/
@@ -572,7 +610,7 @@ img {
 }
 
 .telephone {
-  margin-bottom:32px;
+  margin-bottom:38px;
 }
 
 .btn-contacts {
@@ -591,6 +629,7 @@ img {
 .footer-slogan {
   margin-left: 139px;
   margin-top:75px;
+  padding-bottom: 74px;
 }
 
 .footer-quote {
@@ -605,6 +644,7 @@ img {
 .footer-promotion {
   line-height: 22px;
   color: var(--footer-text);
+  margin: 0;
 }
 
 .social-list {
@@ -612,7 +652,7 @@ img {
   flex-wrap: wrap;
   width: 261px;
   justify-content: space-between;
-
+  padding-bottom: 68px;
 }
 
 .social-button {
@@ -643,11 +683,27 @@ img {
 
 /*Main-modal*/
 
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 960px;
+  height: 590px;
+  /* box-shadow:; */
+
+}
+
 .modal-title {
   font-weight: 700;
   font-size: 45px;
   line-height: 53px;
   color: var(--title-color);
+  padding-top: 63px;
+  padding-left: 100px;
+  padding-bottom: 37px;
 }
 
 .modal-form {
@@ -688,16 +744,51 @@ img {
 }
 
 .modal-close {
-  color: var(--basic-red);
+  position: absolute;
+  top: 0;
+  left: 430px;
+  width: 23px;
+  height: 23px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  /* display: none; */
+}
+
+.modal-close:active {
+  outline: none;
+}
+
+.modal-close:before,
+.modal-close:after {
+  content: "";
+  position: absolute;
+  top: 123px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: var(--basic-red);
   opacity: 0.3;
 }
 
-.modal-close:hover {
+.modal-close:before {
+  transform: rotate(45deg);
+}
+
+.modal-close:after {
+  transform: rotate(-45deg);
+}
+
+
+.modal-close:hover:before,
+.modal-close:hover:after {
+
   color: var(--basic-red);
   opacity: 1;
 }
 
-.modal-close:active{
+.modal-close:hover:active,
+.modal-close:hover:active {
   color: var(--basic-red);
   opacity:0.1;
 }
