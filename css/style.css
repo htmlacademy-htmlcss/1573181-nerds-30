@@ -170,8 +170,9 @@ img {
 
 
 /*Main logo*/
-.logo img {
-  padding-top: 49px;
+
+.main-header {
+  padding-top: 47px;
 }
 
 .logo:hover {
@@ -198,13 +199,12 @@ img {
   font-weight: 500;
   color: var(--title-color);
   text-transform: uppercase;
-  padding-top: 75px;
-  padding-bottom: 9px;
-  padding-left: 40px;
 }
 
 .site-cart{
   position: relative;
+  padding-left: 40px;
+  padding-top:8px;
 }
 
 .site-cart:before {
@@ -214,8 +214,8 @@ img {
   height: 15px;
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
-  left:0;
-  bottom: 17px;
+  left: 0;
+  bottom: 7px;
 }
 
 .site-navigation .active {
@@ -238,6 +238,15 @@ img {
   flex-wrap: wrap;
 }
 
+.main-navigation {
+  padding-right: 45px;
+  padding-top:8px;
+}
+
+.site-navigation li {
+  margin: 0 22px;
+}
+
 /* Main features */
 
 .features {
@@ -252,14 +261,16 @@ img {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
+  max-width: 538px;
   color: var(--title-color);
   margin:0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .slogan-exposition {
+  max-width: 416px;
   margin:0;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .features-slider-btn {
@@ -409,15 +420,19 @@ img {
 .info {
   display:flex;
   justify-content: space-between;
-  margin-bottom:73px;
+  margin-bottom:50px;
   border-top: 2px solid var(--basic-grey);
-  padding-top: 73px;
+  padding-top: 40px;
+}
+
+.info-projects {
+padding-top:35px;
 }
 
 .info-projects-item {
   position: relative;
-  padding-left: 32px;
-  margin-bottom: 46px;
+  padding-left: 35px;
+  margin-bottom: 24px;
 }
 
 .info-projects-item:before {
@@ -427,7 +442,7 @@ img {
   background-color: var(--basic-red);
   height: 2px;
   width: 25px;
-  left:0;
+  left:-1px;
 }
 
 .percent-list{
@@ -456,10 +471,11 @@ img {
 }
 
 .nerds-illustration {
-  margin-bottom: 37px;
+  margin-bottom: 30px;
 }
 
 .info-benefits-title {
+  text-align: center;
   margin: 0;
   margin-bottom: 31px;
 }
@@ -470,19 +486,18 @@ img {
   line-height: 64px;
   color: var(--title-color);
   margin:0;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 }
 
 .lead {
+  margin: 0;
   line-height: 18px;
 }
 
 .sign-percent{
-  font-weight: 700;
   font-size: 26px;
-  line-height: 40px;
-  color: var(--title-color);
-  vertical-align: top;
+  margin-left: 1px;
+  top: -0.56 em;
 }
 
 /* Main partners*/
@@ -491,9 +506,9 @@ img {
   display:flex;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 46px 0 44px;
+  padding: 46px 0 37px;
   margin-bottom: 80px;
   border-top: 2px solid var(--basic-grey);
   border-bottom: 2px solid var(--basic-grey);
@@ -502,38 +517,26 @@ img {
 .partners-item img{
   display:block;
 }
+
 .academy-logo {
   width: 199px;
   height: auto;
-  /* margin-left: 32px;
-  margin-right: 48px;
-  padding-top:63px;
-  padding-bottom: 49px; */
+  margin-top: 11px;
 }
 
 .barbershop-logo{
   width: 209px;
   height: auto;
-  /* margin-left: 45px;
-  margin-right: 44px;
-  padding-top:46px;
-  padding-bottom: 44px; */
 }
 
 .pink-logo{
   width: 185px;
   height: auto;
-  /* margin-left: 58px;
-  margin-right: 55px;
-  padding-top:65px;
-  padding-bottom: 63px; */
 }
+
 .mishka-logo {
   width: 173px;
   height: auto;
-  /* margin-left: 63px;
-  padding-top:52px;
-  padding-bottom: 44px; */
 }
 
 .partners-list a{
@@ -551,7 +554,8 @@ img {
 
 .partners-item {
   position:relative;
-  width: 25%;
+  width: calc(25% + 11px);
+  margin: 0 -22px;
   text-align: center;
 }
 
