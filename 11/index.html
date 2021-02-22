@@ -39,7 +39,7 @@
         <ul class="slider-list">
           <li class="slider-item slider-item-current">
             <h3 class="features-slider-slogan">Долго, дорого,<br>скрупулезно.</h3>
-            <p class="slogan-exposition">Математически выверенный дизайн<br>для вашего сайта или приложения.</p>
+            <p class="slogan-exposition">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
             <a class="btn features-slider-btn" href="#">Узнать больше</a>
           </li>
           <li class="slider-item" hidden>
@@ -62,7 +62,8 @@
         </div>
       </div>
     </section>
-    <section class="offer container">
+    <div class="container">
+    <section class="offer">
       <h2 class="visually-hidden">Наши предложения</h2>
       <ul class="offer-list">
         <li class="offer-item item-site">
@@ -82,11 +83,11 @@
         </li>
       </ul>
     </section>
-    <div class="info container">
+    <div class="info">
       <section class="info-projects">
         <h2 class="visually-hidden">О нас</h2>
         <p class="info-projects-resume">Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</p>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>превыше креатива. Работаем не
+        <p class="info-projects-principle">Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>превыше креатива. Работаем не
           покладая рук, как роботы.</p>
         <h3 class="title info-project-title">Выполняем заказы на разработку:</h3>
         <ul class="info-projects-list">
@@ -97,7 +98,7 @@
       </section>
       <section class="info-benefits">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <img src="img/nerds-illustration.png" width="360" height="208" alt="Логотип «Нёрдс» на цветном фоне">
+        <img class="nerds-illustration" src="img/nerds-illustration.png" width="360" height="208" alt="Логотип «Нёрдс» на цветном фоне">
         <h3 class="title info-benefits-title">С 2004 года любим точность во всем:</h3>
         <ul class="percent-list">
           <li>
@@ -117,19 +118,19 @@
     </div>
     <section class="partners">
       <h2 class="visually-hidden">Наши партнеры</h2>
-      <ul class="partners-list container">
-        <li class="partners-item-akademy">
+      <ul class="partners-list">
+        <li class="partners-item">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
             <img class="academy-logo" src="img/logo-html.svg" width="199" height="68" alt="Логотип HTML Academy">
           </a>
         </li>
-        <li class="partners-item-barbershop">
+        <li class="partners-item">
           <a href="#">
             <img class="barbershop-logo" src="img/logo-barbershop.svg" width="209" height="90"
               alt="Логотип Barbershop «Borodinski»">
           </a>
         </li>
-        <li class="partners-item-pink">
+        <li class="partners-item">
           <a href="#">
             <img class="pink-logo" src="img/logo-pink.svg" width="185" height="52" alt="Логотип Pink">
           </a>
@@ -140,6 +141,7 @@
         </li>
       </ul>
     </section>
+    </div>
   </main>
   <footer class="main-footer">
     <section class="footer-contacts">
@@ -188,7 +190,7 @@
       </div>
     </section>
   </footer>
-  <section class="modal" hidden>
+  <section class="modal">
     <h2 class="modal-title">Напишите нам</h2>
     <form class="letter" action="#" method="post">
       <p>
@@ -205,7 +207,7 @@
       </p>
       <button class="btn modal-btn" type="submit">Отправить</button>
     </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 </body>
 
