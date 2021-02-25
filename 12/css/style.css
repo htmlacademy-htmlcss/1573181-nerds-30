@@ -236,11 +236,12 @@ img {
   bottom: 7px;
 }
 
-.site-navigation .active {
+.active {
   border-bottom: 2px solid var(--basic-red);
+  padding-bottom: 13px;
 }
 
-.site-navigation a:hover,
+.site-navigation a:not(.active):hover,
 .site-cart:hover {
   color: var(--basic-red);
 }
@@ -842,7 +843,7 @@ padding-top:35px;
 /* Store */
 
 .store-title-wrap {
-  padding-top: 87px;
+  padding-top: 73px;
   padding-bottom: 108px;
 }
 
@@ -883,7 +884,7 @@ padding-top:35px;
   padding-top:39px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .scale {
@@ -945,7 +946,7 @@ padding-top:35px;
 }
 
 .field legend {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .filter-form li {
@@ -953,18 +954,18 @@ padding-top:35px;
 }
 
 .filter-grid {
-  margin-bottom: 47px;
+  margin-bottom: 44px;
 }
 
 .filter-grid li {
-  margin-bottom: 20px;
-  padding-left: 32px;
+  margin-bottom: 15px;
+  padding-left: 35px;
 }
 
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
-  left: -32px;
+  left: -35px;
   top: -1px;
   width: 25px;
   height: 25px;
@@ -986,12 +987,12 @@ padding-top:35px;
 }
 
 .filter-details {
-  margin-bottom: 48px;
+  margin-bottom: 46px;
 }
 
 .filter-details li {
-  margin-bottom: 17px;
-  padding-left: 34px;
+  margin-bottom: 16px;
+  padding-left: 35px;
 }
 
 .filter-form label {
@@ -1044,8 +1045,18 @@ padding-top:35px;
   opacity: 1;
 }
 
-/*
-:disabled */
+.filter-input-radio:disabled + label:before,
+.filter-input-radio:checked:disabled + label:after,
+.filter-input-checkbox:disabled + label:before,
+.filter-input-checkbox:checked:disabled + label:before,
+.filter-input-checkbox:checked:disabled + label:after {
+  opacity: 0.1;
+}
+
+.filter-input-radio:disabled + label,
+.filter-input-checkbox:disabled + label{
+  opacity: 0.3;
+}
 
 .btn-grey {
   width: 260px;
@@ -1092,13 +1103,21 @@ padding-top:35px;
 }
 
 .variant {
-  margin-right: 40px;
+  margin-right: 44px;
+  padding-top: 2px;
 }
 
 
-.variant li:first-child,
-.variant li:nth-child(2){
-  margin-right: 26px;
+.variant li:first-child {
+  margin-right: 24px;
+}
+
+.variant li:nth-child(2) {
+  margin-right: 21px;
+}
+
+.variant li:last-child {
+  margin-right: 3px;
 }
 
 .variant li,
@@ -1140,7 +1159,7 @@ padding-top:35px;
 }
 
 .route-item-down{
-  margin-right: 10px;
+  margin-right: 14px;
 }
 
 /* Template - sample*/
@@ -1152,13 +1171,13 @@ padding-top:35px;
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  margin-bottom: 55px;
+  margin-bottom: 23px;
 }
 
 .template-sample-item {
   justify-self: end;
   margin:0;
-  margin-bottom: 31px;
+  margin-bottom: 25px;
   min-width: 358px;
   min-height: 618px;
   position: relative;
@@ -1260,6 +1279,7 @@ padding-top:35px;
 
 .next{
   width: 260px;
+  text-transform: uppercase;
 }
 
 .pagination-list a:hover {
