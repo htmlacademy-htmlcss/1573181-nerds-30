@@ -23,7 +23,7 @@
         <ul class="site-navigation">
           <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
-          <li class="active"><a>Магазин</a></li>
+          <li ><a class="active">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
@@ -39,15 +39,23 @@
     <div class="catalog-wrap container">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="price-selection">
+        <form class="price-selection" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="price-range">
             <legend>Стоимость:</legend>
             <div class="runner">
-              <input type="range" min="0" max="40000">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0"></div>
+              <div class="toggle toggle-max" tabindex="0"></div>
             </div>
             <div class="price-value">
-              от <input type="number" step="1" min="0" placeholder="0">
-              до <input type="number" step="1" max="40000" placeholder="15000">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="15000">
+              </label>
             </div>
           </fieldset>
         </form>
@@ -56,15 +64,18 @@
             <legend>Сетка:</legend>
             <ul class="filter-grid">
               <li>
-                <input type="radio" name="type of grid" value="adaptive" id="filter-adaptive" checked>
+                <input class="visually-hidden filter-input-radio" type="radio" name="type of grid" value="adaptive"
+                  id="filter-adaptive" checked>
                 <label for="filter-adaptive">Адaптивная</label>
               </li>
               <li>
-                <input type="radio" name="type of grid" value="fixed" id="filter-fixed">
+                <input class="visually-hidden filter-input-radio" type="radio" name="type of grid" value="fixed"
+                  id="filter-fixed">
                 <label for="filter-fixed">Фиксированная</label>
               </li>
               <li>
-                <input type="radio" name="type of grid" value="rubber" id="filter-rubber">
+                <input class="visually-hidden filter-input-radio" type="radio" name="type of grid" value="rubber"
+                  id="filter-rubber" disabled>
                 <label for="filter-rubber">Резиновая</label>
               </li>
             </ul>
@@ -73,23 +84,26 @@
             <legend>Особенности:</legend>
             <ul class="filter-details">
               <li>
-                <input type="checkbox" name="slider" id="filter-slider" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" id="filter-slider"
+                  checked>
                 <label for="filter-slider">Слайдер</label>
               </li>
               <li>
-                <input type="checkbox" name="advantages" id="filter-advantages">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="advantages"
+                  id="filter-advantages">
                 <label for="filter-advantages">Блок преимуществ</label>
               </li>
               <li>
-                <input type="checkbox" name="news" id="filter-news" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="news" id="filter-news"
+                  checked>
                 <label for="filter-news">Новости</label>
               </li>
               <li>
-                <input type="checkbox" name="gallery" id="filter-gallery">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery" disabled>
                 <label for="filter-gallery">Галерея</label>
               </li>
               <li>
-                <input type="checkbox" name="cart" id="filter-cart">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="cart" id="filter-cart">
                 <label for="filter-cart">Корзина</label>
               </li>
             </ul>
@@ -99,41 +113,41 @@
       </section>
       <section class="template">
         <h2 class="visually-hidden">Список шаблонов</h2>
-
-        <form>
+        <form class="sorting-form">
           <fieldset class="sorting-field">
             <div class="sorting-wrap">
               <legend class="sorting">Сортировать:</legend>
               <ul class="variant">
-                <li class="variant-item">
-                  <input type="radio" name="inset" value="price" id="inset-price" checked>
+                <li>
+                  <input class="visually-hidden" type="radio" name="inset" value="price" id="inset-price" checked>
                   <label for="inset-price">По цене </label>
                 </li>
                 <li>
-                  <input type="radio" name="inset" value="type" id="inset-type">
+                  <input class="visually-hidden" type="radio" name="inset" value="type" id="inset-type">
                   <label for="inset-type">По типу</label>
                 </li>
                 <li>
-                  <input type="radio" name="inset" value="title" id="inset-title">
+                  <input class="visually-hidden" type="radio" name="inset" value="title" id="inset-title">
                   <label for="inset-title">По названию</label>
               </ul>
               <ul class="route">
-                <li>
-                  <input type="radio" class="choice" name="choice" value="down" id="choice-down" checked>
+                <li class="route-item route-item-down">
+                  <input class="visually-hidden" type="radio" class="choice" name="choice" value="down" id="choice-down"
+                    checked>
                   <label for="choice-down">
                     <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g opacity="0.2">
-                        <path d="M5.5 10L0 0H11" fill="#000000" />
+                        <path d="M5.5 10L0 0H11" fill="#A6A6A6" />
                       </g>
                     </svg>
                   </label>
                 </li>
-                <li>
-                  <input type="radio" class="choice" name="choice" value="up" id="choice-up">
+                <li class="route-item route-item-up">
+                  <input class="visually-hidden" type="radio" class="choice" name="choice" value="up" id="choice-up">
                   <label for="choice-up">
                     <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g opacity="0.2">
-                        <path d="M5.5 0L0 10H11L5.5 0Z" fill="#000000" />
+                        <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
                       </g>
                     </svg>
                   </label>
@@ -144,10 +158,13 @@
         </form>
         <ul class="template-sample-list">
           <li class="template-sample-item">
-            <h3>«Sedona»</h3>
-            <p>
-              <img src="img/img-sedona.jpg" width="358" height="578" alt="Шаблон «Sedona»">
-            </p>
+            <h3 class="visually-hidden">«Sedona»</h3>
+            <div class="dot">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="img/img-sedona.jpg" width="358" height="578" alt="Шаблон «Sedona»">
             <div class="sedona-template information">
               <a href="#">Sedona</a>
               <p class="template-describe"> Информационный сайт <br>для туристов</p>
@@ -157,11 +174,14 @@
             </div>
           </li>
           <li class="template-sample-item">
-            <h3>«Pink»</h3>
-            <p>
-              <img src="img/img-pink.jpg" width="358" height="578" alt="Шаблон «Pink APP»">
-            </p>
-            <div class="pink-template information" hidden>
+            <h3 class="visually-hidden">«Pink»</h3>
+            <div class="dot">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="img/img-pink.jpg" width="358" height="578" alt="Шаблон «Pink APP»">
+            <div class="pink-template information">
               <a href="#">Pink App</a>
               <p class="template-describe"> Продуктовый лендинг<br>приложения для iOS и Android</p>
               <p>
@@ -170,11 +190,14 @@
             </div>
           </li>
           <li class="template-sample-item">
-            <h3>Бaрбершоп «Borodinski»</h3>
-            <p>
-              <img src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон Barbershop «Borodinski»">
-            </p>
-            <div class="barbershop-template information" hidden>
+            <h3 class="visually-hidden">Бaрбершоп «Borodinski»</h3>
+            <div class="dot">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон Barbershop «Borodinski»">
+            <div class="barbershop-template information">
               <a href="#">Barbershop</a>
               <p class="template-describe"> Сайт салона красоты.<br>Для мужчин, да.</p>
               <p>
@@ -183,11 +206,14 @@
             </div>
           </li>
           <li class="template-sample-item">
-            <h3>«Mishka»</h3>
-            <p>
-              <img src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон «Mishka»">
-            </p>
-            <div class="mishka-template information" hidden>
+            <h3 class="visually-hidden">«Mishka»</h3>
+            <div class="dot">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон «Mishka»">
+            <div class="mishka-template information">
               <a href="#">MISHKA</a>
               <p class="template-describe"> Интернет-магазин <br>вязаных игрушек</p>
               <p>
@@ -196,11 +222,14 @@
             </div>
           </li>
           <li class="template-sample-item">
-            <h3>«A Plus»</h3>
-            <p>
-              <img src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон «A Plus»">
-            </p>
-            <div class="aplus-template information" hidden>
+            <h3 class="visually-hidden">«A Plus»</h3>
+            <div class="dot">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон «A Plus»">
+            <div class="aplus-template information">
               <a href="#">A Plus</a>
               <p class="template-describe"> Лендинг курсов повышения<br>квалификации</p>
               <p>
@@ -209,11 +238,14 @@
             </div>
           </li>
           <li class="template-sample-item">
-            <h3>«Кваст»</h3>
-            <p>
-              <img src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон «Кваст»">
-            </p>
-            <div class="kvast-template information" hidden>
+            <h3 class="visually-hidden">«Кваст»</h3>
+            <div class="dot">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон «Кваст»">
+            <div class="kvast-template information">
               <a href="#">КВАСТ</a>
               <p> Промо-сайт производителя<br>крафтового кваса</p>
               <p>
