@@ -109,7 +109,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
 }
 
 .title {
@@ -201,6 +200,7 @@ img {
 
 .logo img {
   display:block;
+  width: 160px;
 }
 
 .logo:hover {
@@ -230,8 +230,7 @@ img {
 
 .site-cart{
   position: relative;
-  padding-left: 40px;
-  padding-top:8px;
+  padding: 8px 0 0 40px;
   margin-top: 19px;
 }
 
@@ -241,7 +240,6 @@ img {
   width: 15px;
   height: 15px;
   background-image: url("../img/cart-icon.svg");
-  object-fit: contain;
   background-repeat: no-repeat;
   left: 0;
   bottom: 7px;
@@ -256,7 +254,7 @@ img {
   color: var(--basic-red);
 }
 
-.site-navigation a:active,
+.site-navigation a:hover:active,
 .site-cart:active {
   color: var(--title-color);
   opacity:0.3
@@ -266,17 +264,15 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
 }
 
 .main-navigation {
-  padding-right: 45px;
-  padding-top: 12px;
+  padding: 12px 45px 0 0;
 }
 
 .site-navigation li {
-  margin: 0 22px;
+  margin: 0 23px;
 }
 
 .site-navigation a {
@@ -299,14 +295,12 @@ img {
   line-height: 55px;
   max-width: 538px;
   color: var(--title-color);
-  margin:0;
-  margin-bottom: 27px;
+  margin:0 0 27px;
 }
 
 .slogan-exposition {
   max-width: 416px;
-  margin:0;
-  margin-bottom: 39px;
+  margin:0 0 37px;
 }
 
 .features-slider-btn {
@@ -318,10 +312,9 @@ img {
   display: none;
   width: 100%;
   min-height: 423px;
-  padding: 73px 0 80px;
+  padding: 74px 0 80px;
   background-position: right bottom;
   background-repeat: no-repeat;
-  object-fit: contain;
 }
 
 .slider-item-current {
@@ -379,11 +372,9 @@ img {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 100px;
-  margin:0;
-  padding:0;
+  margin:0 0 60px;
+  padding: 0 60px 0 0;
   list-style: none;
-  margin-bottom: 60px;
-  padding-right: 60px;
 }
 
 .offer .title {
@@ -403,7 +394,6 @@ img {
   width:100%;
   height:146px;
   margin-bottom: 24px;
-  object-fit: contain;
 }
 
 .item-site:before {
@@ -464,8 +454,7 @@ img {
 }
 
 .info-projects {
-  padding-right: 80px;
-  padding-top:35px;
+  padding:34px 80px 0 0;
 }
 
 .info-projects-item {
@@ -498,31 +487,29 @@ img {
   font-size: 45px;
   line-height: 45px;
   color: var(--title-color);
-  margin: 0;
-  margin-bottom: 32px;
+  margin: 0 0 34px;
+
 }
 
 .info-projects-principle {
-  margin: 0;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
 }
 
 .info-project-title {
   color: var(--basic-color);
-  margin: 0;
-  margin-bottom: 23px;
+  margin: 0 0 23px;
 }
 
 .nerds-illustration {
   display: block;
   width: 360px;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 .info-benefits-title {
   text-align: center;
-  margin: 0;
-  margin-bottom: 31px;
+  margin: 0 0 29px;
+  padding-left: 3px;
 }
 
 .percent{
@@ -530,8 +517,7 @@ img {
   font-size: 45px;
   line-height: 64px;
   color: var(--title-color);
-  margin:0;
-  margin-bottom: 12px;
+  margin:0 0 12px;
 }
 
 .lead {
@@ -629,7 +615,6 @@ img {
   padding: 54px 0;
   background: var(--basic-grey) url("../img/map.png");
   background-size: cover;
-  object-fit: contain;
 }
 
 .contacts-name {
@@ -663,21 +648,19 @@ img {
   display:grid;
   grid-template-columns: max-content 1fr;
   align-items: center;
-  padding-bottom: 68px;
-  padding-top: 68px;
+  padding: 65px 20px 68px;
 }
 
 .footer-slogan {
-  margin-left: 130px;
+  margin-left: 129px;
 }
 
 .footer-quote {
-  margin: 0;
+  margin: 0 0 10px;
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   color: var(--title-color);
-  margin-bottom: 10px;
 }
 
 .footer-promotion {
@@ -746,25 +729,15 @@ img {
   font-size: 45px;
   line-height: 53px;
   font-weight: inherit;
-  margin: 0;
-  margin-bottom: 37px;
+  margin: 0 0 37px;
   padding-right: 50px;
 }
 
 .modal-form {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-}
-
-.form-group:first-child {
-  grid-column: 1/2;
-  margin-right: 40px;
-  margin-bottom: 31px;
-}
-
-.form-group:nth-child(2) {
-  grid-column:3/4;
+  column-gap: 40px;
 }
 
 .form-group:nth-child(3),
@@ -772,19 +745,13 @@ img {
   grid-column: 1/-1;
 }
 
+.form-group:first-child,
+.form-group:nth-child(2) {
+  margin-bottom: 31px;
+}
+
 .form-group:nth-child(3) {
   margin-bottom: 46px;
-}
-
-.modal-form-name,
-.modal-form-email {
-  width: 360px;
-  height: 50px;
-}
-
-.modal-form-letter {
-  width: 760px;
-  height: 118px;
 }
 
 .modal-form-label {
@@ -792,8 +759,18 @@ img {
   margin-bottom: 9px;
 }
 
-.modal-form input,
+.modal-form input {
+  width: 100%;
+  height: 50px;
+}
+
 .modal-form textarea {
+  width: 100%;
+  height: 118px;
+  padding-top: 16px;
+}
+
+.base-input {
   font-family: inherit;
   font-size: inherit;
   line-height: 18px;
@@ -804,20 +781,16 @@ img {
   padding-left: 15px;
 }
 
-.modal-form textarea {
-  padding-top: 16px;
-}
-
-.modal-form input:hover {
+.base-input:hover {
   border-color: var(--detecting-color);
 }
 
-.modal-form input:focus {
+.base-input:focus {
   border-color: var(--title-color);
   color: var(--footer-text);
 }
 
-.modal-form input:invalid {
+.base-input:invalid{
   border-color: var(--special-light-red);
   color: var(--special-light-red);
 }
@@ -878,8 +851,8 @@ img {
 /* Store */
 
 .store-title-wrap {
-  padding-top: 73px;
-  padding-bottom: 108px;
+  padding: 72px 0 107px;
+  margin-bottom: 55px;
 }
 
 .store-title {
@@ -893,15 +866,10 @@ img {
 
 /* Filter */
 
-.filter {
-  margin-top: 55px;
-}
-
 .price-range {
   border:0;
   padding: 0;
-  margin: 0;
-  margin-bottom: 54px;
+  margin: 0 0 54px;
   width: 260px;
 }
 
@@ -915,10 +883,8 @@ img {
   height: 80px;
   background-color: var(--basic-grey);
   border-radius: 3px;
-  padding-top:39px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-bottom: 12px;
+  padding:39px 20px 0;
+  margin-bottom: 13px;
 }
 
 .scale {
@@ -1093,7 +1059,7 @@ img {
 }
 
 .btn-grey {
-  width: 260px;
+  min-width: 260px;
   background-color: var(--basic-grey);
   color: var(--title-color);
 }
@@ -1116,9 +1082,7 @@ img {
 .sorting-field {
   border: 0;
   padding: 0;
-  margin: 0;
-  margin-top: 55px;
-  margin-bottom: 48px;
+  margin: 0 0 48px;
 }
 
 .sorting-wrap {
@@ -1131,13 +1095,14 @@ img {
   cursor: pointer;
 }
 
-.variant,
 .route {
-  justify-self: end;
+  max-width: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 .variant {
-  margin-right: 44px;
+  margin-left: 266px;
   padding-top: 2px;
 }
 
@@ -1174,11 +1139,6 @@ img {
   opacity: 1;
 }
 
-.route {
-  padding: 0;
-  margin: 0;
-}
-
 .route-item:hover g{
   opacity: 1;
 }
@@ -1209,8 +1169,7 @@ img {
 
 .template-sample-item {
   justify-self: end;
-  margin:0;
-  margin-bottom: 25px;
+  margin:0 0 25px;
   min-width: 358px;
   min-height: 618px;
   position: relative;
@@ -1248,23 +1207,23 @@ img {
 }
 
 .information {
-  display: none;
+  /* display: none; */
   position: absolute;
   width: 358px;
   height: 231px;
+  min-height: 231px;
+  max-height: 578px;
   background-color: var(--basic-grey);
   text-align: center;
-  padding-top: 26px;
+  padding: 26px 0 44px;
   bottom:5px;
+  overflow: auto;
 }
 
 .template-describe {
-  margin-top: 12px;
-  margin-bottom: 32px;
-}
-
-.price-btn {
-  margin-left: 80px;
+  margin: 12px 0 33px;
+  line-height: 18px;
+  color: var(--adress-color);
 }
 
 .template-sample-list a:hover {
@@ -1277,16 +1236,11 @@ img {
 }
 
 .price-btn {
-  width: 200px;
+  min-width: 200px;
 }
 
 .price-btn:active {
   outline: none;
-}
-
-.template-describe {
-  line-height: 18px;
-  color: var(--adress-color);
 }
 
 .pagination-list {
@@ -1305,11 +1259,9 @@ img {
   color: var(--title-color);
   text-align: center;
   background-color: var(--basic-grey);
-  margin-right: 11px;
-  padding-top: 17px;
-  padding-bottom: 15px;
+  margin: 0 11px 10px 0;
+  padding: 17px 10px 15px;
   border-radius: 3px;
-  margin-bottom: 10px;
 }
 
 .next{
@@ -1327,13 +1279,10 @@ img {
   box-shadow: inset 0px 3px 0px var(--shadow-color);
 }
 
-
-
 .pagination-current a,
 .pagination-current a:hover,
 .pagination-current a:active {
   background-color:  var(--pagination-bg);
   border: 3px solid var(--border-color);
-  padding-top: 14px;
-  padding-bottom: 12px;
+  padding: 14px 10px 12px;
 }
