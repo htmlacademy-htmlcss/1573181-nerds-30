@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Надежда Лукьянова](https://up.htmlacademy.ru/htmlcss/30/user/1573181).
-* Наставник:[Роман Жарко] (https://htmlacademy.ru/profile/id116336).
+* Наставник:[Елена Асташина] (https://htmlacademy.ru/profile/helen_astashina).
 
 ---
 
