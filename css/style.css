@@ -277,6 +277,7 @@ img {
 
 .site-navigation a {
   padding: 15px 0;
+  outline-offset: -1px;
 }
 
 /* Main features */
