@@ -153,6 +153,9 @@ img {
   margin: 0 auto;
 }
 
+* { outline-color: var(--title-color);
+}
+
 /*Main-background*/
 
 .main-header,
