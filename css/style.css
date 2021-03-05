@@ -76,6 +76,10 @@
   box-sizing: border-box;
 }
 
+* {
+  outline-color: var(--title-color);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -151,9 +155,6 @@ img {
   max-width: 1198px;
   padding: 0 20px;
   margin: 0 auto;
-}
-
-* { outline-color: var(--title-color);
 }
 
 /*Main-background*/
@@ -1313,44 +1314,3 @@ img {
   padding: 14px 10px 12px;
 }
 
-/* Animations */
-
-@keyframes bounce {
-  0% {
-    transform: translateY(-500px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-}
