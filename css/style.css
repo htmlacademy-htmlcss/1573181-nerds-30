@@ -1070,7 +1070,7 @@ img {
 
 .filter-input-radio:focus + label,
 .filter-input-checkbox:focus + label {
-  outline: 3px solid var(--title-color);
+  outline: auto;
 }
 
 .btn-grey {
@@ -1172,7 +1172,7 @@ img {
 
 .variant input:focus + label,
 .route input:focus + label {
-  outline: 3px solid var(--title-color);
+  outline: auto;
 }
 
 /* Template - sample*/
