@@ -613,6 +613,8 @@ img {
   min-height: 308px;
   background-color: var(--btn-color);
   padding: 49px 50px 47px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-contacts {
@@ -620,6 +622,15 @@ img {
   background: var(--basic-grey) url("../img/map.png");
   background-size: cover;
   position: relative;
+}
+
+.contacts-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 .contacts-name {
