@@ -4,26 +4,34 @@ const modalClose = modal.querySelector(".modal-close");
 const modalForm = modal.querySelector(".modal-form");
 const nameInput = modal.querySelector(".name-input");
 const mailInput = modal.querySelector(".mail-input");
+const messageInput = modal.querySelector(".message-input")
 
 let isStorageSupport = true;
-let storage = "";
+let nameFromStorage = "";
+let mailFromStorage = "";
 
 try {
-  storage = localStorage.getItem("name");
+  nameFromStorage = localStorage.getItem("name");
+  mailFromStorage = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
-}
+};
+
 
 btnContacts.addEventListener("click", function (evt) {
   evt.preventDefault();
   modal.classList.add("modal-show");
-
-  if (storage) {
-    nameInput.value = storage;
+  if (nameFromStorage) {
+    if (nameFromStorage) {
+    nameInput.value = nameFromStorage;
     mailInput.focus();
-  } else {
+    } else {
+    mailInput.value = mailFromStorage;
+    message.focus();
+    }
+    } else {
     nameInput.focus();
-  }
+    }
 });
 
 modalClose.addEventListener("click", function (evt) {
@@ -34,8 +42,7 @@ modalClose.addEventListener("click", function (evt) {
 
 modalForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  if (!nameInput.value || !emailInput.value) {
-    evt.preventDefault();
+  if (!nameInput.value || !mailInput.value) {
     modal.classList.remove("modal-error");
     modal.offsetWidth = modal.offsetWidth;
     modal.classList.add("modal-error");
