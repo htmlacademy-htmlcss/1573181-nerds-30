@@ -41,8 +41,8 @@ modalClose.addEventListener("click", function (evt) {
 });
 
 modalForm.addEventListener("submit", function (evt) {
-  evt.preventDefault();
   if (!nameInput.value || !mailInput.value) {
+    evt.preventDefault();
     modal.classList.remove("modal-error");
     modal.offsetWidth = modal.offsetWidth;
     modal.classList.add("modal-error");
