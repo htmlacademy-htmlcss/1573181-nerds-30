@@ -982,8 +982,7 @@ img {
   border-radius: 3px;
   background-color: var(--basic-grey);
   height: 38px;
-  margin-left: 11px;
-  padding: 10px;
+  margin-left: 13px;
   text-align: center;
 }
 
@@ -1288,7 +1287,7 @@ img {
   color: var(--adress-color);
   overflow: auto;
   overflow: auto;
-  max-height: 390px;
+  max-height: 395px;
 }
 
 .template-sample-list a:hover {
