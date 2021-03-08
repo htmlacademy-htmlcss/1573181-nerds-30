@@ -66,7 +66,7 @@ window.addEventListener("keydown", function (evt) {
 ymaps.ready(init);
 
 function init() {
-  const map = new ymaps.Map('map', {
+  const map = new ymaps.Map("map", {
     center: [59.938916, 30.321529],
     zoom: 17,
     controls: ['zoomControl'],
