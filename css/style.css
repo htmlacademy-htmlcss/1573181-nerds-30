@@ -6,7 +6,7 @@
 
   --basic-color: #283136;
   --title-color: #000000;
-  --adress-color: #666666;
+  --address-color: #666666;
   --btn-color: #FFFFFF;
   --footer-text: #444444;
   --btn-push-color:rgba(255,255,255,0.3);
@@ -653,15 +653,15 @@ img {
   margin: 0 0 23px;
 }
 
-.contacts-adress {
+.contacts-address {
   margin: 0 0 17px;
 }
 
-.contacts-adress,
+.contacts-address,
 .footer-phone,
 .telephone{
   line-height: 18px;
-  color: var(--adress-color);
+  color: var(--address-color);
 }
 
 .telephone {
@@ -1287,7 +1287,7 @@ img {
 .template-describe {
   margin: 12px 0 33px;
   line-height: 18px;
-  color: var(--adress-color);
+  color: var(--address-color);
   overflow: auto;
   overflow: auto;
   max-height: 395px;
